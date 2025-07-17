@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import ChatFeatureSection from "@/components/ChatFeatureSection";
 import FeatureSection from "@/components/FeatureSection";
 import WalletFeatureSection from "@/components/WalletFeatureSection";
+import CardFeatureSection from "@/components/CardFeatureSection";
 export default function Home() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -17,7 +18,7 @@ export default function Home() {
       <HeroSection />
       <ChatFeatureSection />
       <WalletFeatureSection />
-      <FeatureSection id="card" title="Virtual Card" desc="Safe and convenient virtual card for global payments." color="bg-yellow-200" />
+      <CardFeatureSection />
       <FeatureSection id="crypto" title="Crypto Transfer" desc="Peer-to-peer crypto transfers, fast and reliable." color="bg-purple-200" />
     </div>
   );
