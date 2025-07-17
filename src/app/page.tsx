@@ -6,6 +6,7 @@ import ChatFeatureSection from "@/components/ChatFeatureSection";
 import FeatureSection from "@/components/FeatureSection";
 import WalletFeatureSection from "@/components/WalletFeatureSection";
 import CardFeatureSection from "@/components/CardFeatureSection";
+import Footer from "@/components/Footer";
 export default function Home() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -19,7 +20,8 @@ export default function Home() {
       <ChatFeatureSection />
       <WalletFeatureSection />
       <CardFeatureSection />
-      <FeatureSection id="crypto" title="Crypto Transfer" desc="Peer-to-peer crypto transfers, fast and reliable." color="bg-purple-200" />
+      <FeatureSection id="dev" title="MP Developer" desc="Peer-to-peer crypto transfers, fast and reliable." color="bg-purple-200" />
+      <Footer />
     </div>
   );
 }

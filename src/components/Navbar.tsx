@@ -6,7 +6,7 @@ const navs = [
     { id: "wallet", label: "Wallet" },
     { id: "card", label: "MP Card" },
     // { id: "crypto", label: "Transfer" },
-    { id: "crypto", label: "Developers" },
+    { id: "dev", label: "Developers" },
     // { id: "dev", label: "Developers" },
 ];
 

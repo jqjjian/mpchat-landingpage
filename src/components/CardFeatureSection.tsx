@@ -18,85 +18,115 @@ export default function CardFeatureSection() {
     return (
         <section
             id="card"
-            className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-gray-950"
+            className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden"
         >
-            {/* 动态全球地图背景占位 */}
-            <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-                <svg width="100%" height="100%" viewBox="0 0 1440 800" fill="none" className="w-full h-full opacity-30 animate-pulse-slow">
-                    <ellipse cx="720" cy="400" rx="600" ry="300" fill="#3b82f6" fillOpacity="0.12" />
-                    <ellipse cx="900" cy="500" rx="400" ry="180" fill="#6366f1" fillOpacity="0.10" />
-                </svg>
+            {/* 背景图片+深色蒙版 */}
+            <div className="absolute inset-0 z-0">
+                <img src="/pexels-jack-sparrow-4199490.jpg" alt="global map" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-black/60" />
             </div>
             <div className="relative z-10 w-full flex flex-col items-center px-4 py-20" style={{ maxWidth: 1300 }}>
-                {/* 标题 */}
+                {/* 主标题+副标题 */}
                 <motion.h2
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, type: "spring" }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-5xl font-bold text-white mb-12 text-center drop-shadow-lg"
+                    className="text-4xl md:text-5xl font-bold text-white mb-4 text-center drop-shadow-lg"
                 >
                     Virtual Card for Global Payments
                 </motion.h2>
-                {/* 虚拟信用卡卡面展示 */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.7 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.7, type: "spring" }}
+                <motion.p
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2, type: "spring" }}
                     viewport={{ once: true }}
-                    className="w-[340px] h-[210px] rounded-3xl bg-gradient-to-tr from-blue-700 to-purple-700 shadow-2xl flex flex-col justify-between p-8 mb-10"
+                    className="text-lg md:text-2xl text-blue-100 mb-10 text-center max-w-2xl"
                 >
-                    <div className="text-white text-lg font-semibold">MP Card</div>
-                    <div className="text-white text-2xl font-bold tracking-widest mb-2">Unlock Your Crypto Spending Power</div>
-                    <div className="flex justify-between items-center">
-                        <span className="text-white/80 text-sm">**** 1234</span>
-                        <span className="text-white/60 text-xs">VIRTUAL</span>
+                    Unlock your crypto spending power. Connect your digital assets to the global payment network. Pay anywhere, anytime, securely and instantly.
+                </motion.p>
+                {/* 内容区：卡片+平台+场景 */}
+                <div className="w-full flex flex-col md:flex-row items-center justify-center gap-12">
+                    {/* 左侧：安全便捷卖点 */}
+                    <div className="flex-1 flex flex-col items-center md:items-start gap-6">
+                        <motion.div
+                            initial={{ opacity: 0, x: -40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.1, type: "spring" }}
+                            viewport={{ once: true }}
+                            className="bg-blue-900/80 rounded-2xl p-6 text-white max-w-xs shadow-lg"
+                        >
+                            <div className="text-xl font-bold mb-2">Smart, Secure, Instant</div>
+                            <ul className="list-disc pl-5 text-base text-blue-100 space-y-1">
+                                <li>Instant virtual card issuance</li>
+                                <li>Bank-level security & privacy</li>
+                                <li>Easy management in the app</li>
+                                <li>Real-time spending control</li>
+                            </ul>
+                        </motion.div>
                     </div>
-                </motion.div>
-                {/* 支付平台 Logo 横向排列 */}
-                <div className="flex flex-row items-center justify-center gap-8 mb-12">
-                    {paymentPlatforms.map((p, i) => (
+                    {/* 中央：虚拟卡片+平台logo+连线 */}
+                    <div className="flex-1 flex flex-col items-center gap-8">
                         <motion.div
-                            key={p.name}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: i * 0.15, type: "spring" }}
+                            initial={{ opacity: 0, scale: 0.7 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.7, type: "spring" }}
                             viewport={{ once: true }}
-                            className="flex flex-col items-center"
+                            className="w-[340px] h-[210px] rounded-3xl bg-gradient-to-tr from-blue-700 to-purple-700 shadow-2xl flex flex-col justify-between p-8 mb-2 border-2 border-white/10"
                         >
-                            <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-md mb-2">
-                                <img src={p.logo} alt={p.name} className="w-10 h-10 object-contain" />
+                            <div className="text-white text-lg font-semibold">MP Card</div>
+                            <div className="text-white text-2xl font-bold tracking-widest mb-2">Unlock Your Crypto Spending Power</div>
+                            <div className="flex justify-between items-center">
+                                <span className="text-white/80 text-sm">**** 1234</span>
+                                <span className="text-white/60 text-xs">VIRTUAL</span>
                             </div>
-                            <span className="text-xs text-white/80">{p.name}</span>
                         </motion.div>
-                    ))}
-                </div>
-                {/* 应用场景图标+英文描述 */}
-                <div className="flex flex-row items-center justify-center gap-10 mt-4">
-                    {scenarios.map((s, i) => (
-                        <motion.div
-                            key={s.label}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: i * 0.18, type: "spring" }}
-                            viewport={{ once: true }}
-                            className="flex flex-col items-center"
-                        >
-                            <div className="w-14 h-14 rounded-full bg-blue-800 flex items-center justify-center text-2xl text-white mb-2 shadow-lg">
-                                {s.icon}
-                            </div>
-                            <span className="text-sm text-white/90 text-center">{s.label}</span>
-                        </motion.div>
-                    ))}
+                        {/* 平台logo+连线 */}
+                        <div className="relative flex flex-row items-center justify-center gap-8 mt-2">
+                            {paymentPlatforms.map((p, i) => (
+                                <motion.div
+                                    key={p.name}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: i * 0.15, type: "spring" }}
+                                    viewport={{ once: true }}
+                                    className="flex flex-col items-center"
+                                >
+                                    <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-md mb-2 relative">
+                                        <img src={p.logo} alt={p.name} className="w-10 h-10 object-contain" />
+                                        {/* 连线 */}
+                                        {i === 0 && <div className="absolute right-[-18px] top-1/2 w-8 h-0.5 bg-blue-400" />}
+                                        {i === 1 && <div className="absolute right-[-18px] top-1/2 w-8 h-0.5 bg-blue-400" />}
+                                    </div>
+                                    <span className="text-xs text-white/80">{p.name}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                        <div className="text-sm text-blue-200 mt-2 text-center max-w-xs">Bind your MP Card to Apple Pay, Google Pay, Alipay and more. Use it anywhere, online or offline.</div>
+                    </div>
+                    {/* 右侧：应用场景 */}
+                    <div className="flex-1 flex flex-col items-center md:items-end gap-6">
+                        <div className="flex flex-row gap-8">
+                            {scenarios.map((s, i) => (
+                                <motion.div
+                                    key={s.label}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: i * 0.18, type: "spring" }}
+                                    viewport={{ once: true }}
+                                    className="flex flex-col items-center"
+                                >
+                                    <div className="w-14 h-14 rounded-full bg-blue-800 flex items-center justify-center text-2xl text-white mb-2 shadow-lg">
+                                        {s.icon}
+                                    </div>
+                                    <span className="text-sm text-white/90 text-center">{s.label}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                        <div className="text-sm text-blue-200 mt-2 text-center max-w-xs">Shop online, pay in cafes, travel globally—MP Card is accepted everywhere Visa/Mastercard is supported.</div>
+                    </div>
                 </div>
             </div>
-            <style jsx global>{`
-        @keyframes pulse-slow {
-          0%, 100% { opacity: 0.3; }
-          50% { opacity: 0.6; }
-        }
-        .animate-pulse-slow { animation: pulse-slow 12s ease-in-out infinite; }
-      `}</style>
         </section>
     );
 } 
