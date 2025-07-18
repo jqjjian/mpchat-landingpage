@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { Parallax } from 'react-scroll-parallax'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const BG_IMAGES = ['/pg1.webp', '/pexels-asphotograpy-230544.webp']
 
@@ -119,7 +120,7 @@ export default function HeroSection() {
                                     href="#"
                                     className="flex items-center justify-center px-3 sm:px-5 py-2 sm:py-3 rounded-xl bg-white text-neutral-800 font-bold text-sm sm:text-base shadow-lg gap-1 sm:gap-2 hover:bg-neutral-100 transition min-w-0 flex-1 sm:flex-none"
                                 >
-                                    <img
+                                    <Image
                                         src="/Google.ee741aca.svg"
                                         alt="Google"
                                         className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
@@ -144,7 +145,7 @@ export default function HeroSection() {
                             }}
                         >
                             <div className="rounded-3xl flex items-center justify-center">
-                                <img
+                                <Image
                                     src="/1.webp"
                                     alt="MP"
                                     className="max-w-full h-auto"

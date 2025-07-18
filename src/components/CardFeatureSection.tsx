@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const paymentPlatforms = [
     { name: 'Apple Pay', logo: '/applepay.svg' },
@@ -22,7 +23,7 @@ export default function CardFeatureSection() {
         >
             {/* 背景图片+深色蒙版 */}
             <div className="absolute inset-0 z-0">
-                <img src="/pexels-jack-sparrow-4199490.jpg" alt="global map" className="w-full h-full object-cover" />
+                <Image src="/pexels-jack-sparrow-4199490.jpg" alt="global map" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/60" />
             </div>
             <div className="relative z-10 w-full flex flex-col items-center px-4 py-20" style={{ maxWidth: 1300 }}>
@@ -239,7 +240,7 @@ export default function CardFeatureSection() {
                                         className="flex flex-col items-center group"
                                     >
                                         <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-md mb-3 relative overflow-hidden group-hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                                            <img
+                                            <Image
                                                 src={p.logo}
                                                 alt={p.name}
                                                 className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-105"

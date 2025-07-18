@@ -58,7 +58,10 @@ client.chat.onMessage((message) => {
 })`
 
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden">
+        <section
+            id="dev"
+            className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden"
+        >
             {/* 背景装饰 */}
             <div className="absolute inset-0">
                 {/* 网格背景 */}
@@ -157,9 +160,9 @@ client.chat.onMessage((message) => {
                     viewport={{ once: true }}
                     className="text-lg text-blue-200 mb-16 text-center max-w-4xl leading-relaxed"
                 >
-                    MP Developer provides the APIs, SDKs, and support for you to create innovative applications.
+                    {`MP Developer provides the APIs, SDKs, and support for you to create innovative applications.
                     Seamlessly integrate secure communications, crypto payments, and social sharing and engagement
-                    features to build what's next for users in the MP ecosystem.
+                    features to build what's next for users in the MP ecosystem.`}
                 </motion.p>
 
                 {/* 统计数据 */}

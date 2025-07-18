@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 
 const navs = [
     { id: 'chat', label: 'Chat' },
@@ -12,17 +13,17 @@ const navs = [
 
 const QR_CODE_URL = 'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://mpchat.app/download' // 占位二维码
 
-function getSectionTop(id: string) {
-    const el = document.getElementById(id)
-    if (!el) return 0
-    const rect = el.getBoundingClientRect()
-    return rect.top + window.scrollY
-}
+// function getSectionTop(id: string) {
+//     const el = document.getElementById(id)
+//     if (!el) return 0
+//     const rect = el.getBoundingClientRect()
+//     return rect.top + window.scrollY
+// }
 
 export default function Navbar() {
     const [active, setActive] = useState('')
     const [showQR, setShowQR] = useState(false)
-    const [lang, setLang] = useState('en')
+    // const [lang, setLang] = useState('en')
     const [showLangList, setShowLangList] = useState(false)
     const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
     const [navHover, setNavHover] = useState(false)
@@ -39,8 +40,8 @@ export default function Navbar() {
                 const el = document.getElementById(navs[i].id)
                 if (el) {
                     const rect = el.getBoundingClientRect()
-                    const delta = Math.abs(rect.top - 80)
-                    if (rect.top - 80 <= 0 && delta < minDelta) {
+                    const delta = Math.abs(rect.top - 64)
+                    if (rect.top - 64 <= 0 && delta < minDelta) {
                         minDelta = delta
                         current = navs[i].id
                     }
@@ -50,7 +51,7 @@ export default function Navbar() {
             const hero = document.getElementById('hero')
             if (hero) {
                 const heroRect = hero.getBoundingClientRect()
-                if (heroRect.bottom - 80 > 0) {
+                if (heroRect.bottom - 64 > 0) {
                     current = ''
                 }
             }
@@ -112,23 +113,34 @@ export default function Navbar() {
         setIsMobileMenuOpen(false) // 关闭移动菜单
         const el = document.getElementById(id)
         if (el) {
-            el.scrollIntoView({ behavior: 'smooth' })
+            // 计算滚动位置，确保板块完整显示
+            const rect = el.getBoundingClientRect()
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+            // 使用导航栏高度64px作为偏移量，确保板块顶部完全可见
+            const targetPosition = rect.top + scrollTop - 64
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            })
         }
     }
 
     // 汉堡菜单图标组件
     const HamburgerIcon = ({ isOpen }: { isOpen: boolean }) => (
-        <div className="w-6 h-6 flex flex-col justify-center items-center">
+        <div className="w-6 h-6 flex flex-col justify-center items-center relative">
             <span
-                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
+                className={`block h-0.5 w-6 bg-white transition-all duration-300 ease-in-out ${
                     isOpen ? 'rotate-45 translate-y-1.5' : ''
                 }`}
             />
             <span
-                className={`block h-0.5 w-6 bg-white transition-all duration-300 mt-1 ${isOpen ? 'opacity-0' : ''}`}
+                className={`block h-0.5 w-6 bg-white transition-all duration-300 ease-in-out mt-1 ${
+                    isOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+                }`}
             />
             <span
-                className={`block h-0.5 w-6 bg-white transition-all duration-300 mt-1 ${
+                className={`block h-0.5 w-6 bg-white transition-all duration-300 ease-in-out mt-1 ${
                     isOpen ? '-rotate-45 -translate-y-1.5' : ''
                 }`}
             />
@@ -161,7 +173,7 @@ export default function Navbar() {
                             }
                         }}
                     >
-                        <img src="/logo.6c0933db.png" alt="logo" className="h-9 w-auto" />
+                        <Image src="/logo.6c0933db.png" alt="logo" className="h-9 w-auto" />
                         <span className="font-bold text-xl text-white tracking-wide">MPChat</span>
                     </div>
                     {/* 桌面端菜单 - 1300px以上显示 */}
@@ -185,11 +197,19 @@ export default function Navbar() {
                                         ref={el => {
                                             navRefs.current[idx] = el
                                         }}
-                                        className={`text-white px-3 py-1 rounded-md transition-colors duration-200 flex items-center gap-2
-                                            ${active === nav.id ? 'font-bold' : 'font-normal'}
-                                            hover:font-bold hover:bg-black/20 cursor-pointer
+                                        className={`text-white px-4 py-2 transition-all duration-300 flex items-center gap-2 relative cursor-pointer
+                                            ${active === nav.id ? 'font-bold' : 'font-normal hover:font-bold'}
+                                            focus:outline-none
                                         `}
                                         onClick={() => handleClick(nav.id)}
+                                        onKeyDown={e => {
+                                            if (e.key === 'Enter' || e.key === ' ') {
+                                                e.preventDefault()
+                                                handleClick(nav.id)
+                                            }
+                                        }}
+                                        tabIndex={0}
+                                        aria-label={`Navigate to ${nav.label} section`}
                                     >
                                         {nav.label}
                                     </button>
@@ -243,7 +263,7 @@ export default function Navbar() {
                                     onMouseEnter={() => setShowQR(true)}
                                     onMouseLeave={() => setShowQR(false)}
                                 >
-                                    <img src={QR_CODE_URL} alt="Download App QR" className="w-32 h-32 mb-2" />
+                                    <Image src={QR_CODE_URL} alt="Download App QR" className="w-32 h-32 mb-2" />
                                     <div className="text-xs text-gray-500">Scan to download</div>
                                 </div>
                             )}
@@ -251,9 +271,17 @@ export default function Navbar() {
 
                         {/* 移动端：汉堡菜单按钮 */}
                         <button
-                            className="mobile-menu-button p-2 text-white hover:bg-white/10 rounded-md transition-colors"
+                            className="mobile-menu-button p-3 text-white transition-all duration-300 focus:outline-none"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            aria-label="Toggle mobile menu"
+                            onKeyDown={e => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault()
+                                    setIsMobileMenuOpen(!isMobileMenuOpen)
+                                }
+                            }}
+                            aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+                            aria-expanded={isMobileMenuOpen}
+                            tabIndex={0}
                         >
                             <HamburgerIcon isOpen={isMobileMenuOpen} />
                         </button>
@@ -263,22 +291,36 @@ export default function Navbar() {
 
             {/* 移动端滑出菜单 */}
             <div
-                className={`mobile-menu fixed top-16 left-0 w-full bg-black/95 backdrop-blur-md transform transition-transform duration-300 ease-in-out ${
-                    isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`mobile-menu fixed top-16 left-0 w-full bg-black/95 backdrop-blur-md transform transition-all duration-300 ease-in-out ${
+                    isMobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
                 }`}
                 style={{ zIndex: 40 }}
             >
                 <div className="px-6 py-4 space-y-4">
                     {/* 移动端菜单项 */}
-                    {navs.map(nav => (
+                    {navs.map((nav, index) => (
                         <button
                             key={nav.id}
-                            className={`block w-full text-left px-4 py-3 text-white text-lg font-medium rounded-lg transition-colors ${
-                                active === nav.id ? 'bg-white/20 font-bold' : 'hover:bg-white/10'
-                            }`}
+                            className={`block w-full text-left px-6 py-4 text-white text-lg font-medium transition-all duration-300 ${
+                                active === nav.id ? 'font-bold' : 'font-normal'
+                            } ${isMobileMenuOpen ? 'animate-slide-in' : ''}`}
+                            style={{
+                                animationDelay: `${index * 100}ms`
+                            }}
                             onClick={() => handleClick(nav.id)}
+                            onKeyDown={e => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault()
+                                    handleClick(nav.id)
+                                }
+                            }}
+                            tabIndex={0}
+                            aria-label={`Navigate to ${nav.label} section`}
                         >
-                            {nav.label}
+                            <span className="flex items-center gap-3">
+                                <span className="w-2 h-2 bg-white/60 rounded-full"></span>
+                                {nav.label}
+                            </span>
                         </button>
                     ))}
 
@@ -302,7 +344,7 @@ export default function Navbar() {
                         </button>
                         {showQR && (
                             <div className="mt-4 flex flex-col items-center p-4 bg-white rounded-xl">
-                                <img src={QR_CODE_URL} alt="Download App QR" className="w-32 h-32 mb-2" />
+                                <Image src={QR_CODE_URL} alt="Download App QR" className="w-32 h-32 mb-2" />
                                 <div className="text-xs text-gray-500">Scan to download</div>
                             </div>
                         )}

@@ -1,6 +1,7 @@
 'use client'
 import { useRef, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const sections = [
     {
@@ -109,10 +110,13 @@ export default function WalletFeatureSection() {
                                     transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
                                     className="relative group"
                                 >
-                                    <img
+                                    <Image
                                         src={s.bg}
                                         alt="MP Wallet Interface"
+                                        width={384}
+                                        height={216}
                                         className="w-80 md:w-96 h-auto rounded-2xl shadow-2xl border border-white/10 transition-all duration-300 group-hover:shadow-3xl"
+                                        priority
                                     />
                                     {/* 光晕效果 */}
                                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
