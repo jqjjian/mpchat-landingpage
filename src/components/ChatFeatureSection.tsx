@@ -1,110 +1,171 @@
-"use client";
-import { Parallax } from 'react-scroll-parallax';
-import { motion } from 'framer-motion';
-
-const USE_IMAGE_BG = false; // 关闭图片背景，使用深色背景
-const BG_COLOR = '#1e293b'; // 深蓝色背景
-
-function FeatureCard({ iconColor, title, desc, align = 'left', imgSrc, imgAlt }: { iconColor: string, title: string, desc: string, align?: 'left' | 'right', imgSrc?: string, imgAlt?: string }) {
-    const phoneW = 240, phoneH = 440, phoneWBig = 400, phoneHBig = 540;
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, type: 'spring' }}
-            viewport={{ once: true, amount: 0.5 }}
-            className={`flex flex-col md:flex-row items-center gap-4 md:gap-8 bg-white/90 rounded-2xl p-4 md:p-8 shadow-xl relative ${align === 'right' ? 'md:flex-row-reverse' : ''}`}
-        >
-            {/* 卡片内动效：图片、标题、描述分方向淡入 */}
-            <motion.div
-                initial={{ opacity: 0, x: align === 'left' ? 60 : -60 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.3, type: 'spring' }}
-                viewport={{ once: true, amount: 0.5 }}
-                className="flex flex-col items-center justify-center shrink-0 group cursor-pointer"
-            >
-                {imgSrc ? (
-                    <img
-                        src={imgSrc}
-                        alt={imgAlt}
-                        className="rounded-2xl object-contain  transition-all duration-300 group-hover:scale-150 group-hover:z-20"
-                        style={{ width: phoneW, height: phoneH }}
-                    />
-                ) : (
-                    <div
-                        className="rounded-2xl flex items-center justify-center text-xs text-gray-400 bg-gray-200 border border-gray-300 shadow-lg transition-all duration-300 group-hover:scale-150 group-hover:z-20"
-                        style={{ width: phoneW, height: phoneH }}
-                    >
-                        Screenshot<br />{phoneW}x{phoneH}
-                    </div>
-                )}
-            </motion.div>
-            <div className="flex-1 flex flex-col justify-center h-full px-0 md:px-6 py-4 md:py-0">
-                <motion.h3
-                    initial={{ opacity: 0, x: -40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5, type: 'spring' }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    className="text-xl md:text-2xl font-bold mb-2 text-gray-900 leading-tight"
-                >{title}</motion.h3>
-                <motion.p
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7, type: 'spring' }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    className="text-base md:text-lg leading-relaxed text-gray-700 whitespace-pre-line"
-                >{desc}</motion.p>
-            </div>
-        </motion.div>
-    );
-}
+'use client'
+import { motion } from 'framer-motion'
 
 export default function ChatFeatureSection() {
     return (
         <section
             id="chat"
-            className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
-            style={{ background: BG_COLOR }}
+            className="relative min-h-screen w-full flex items-center justify-center py-20"
+            style={{ background: '#f8fafc' }}
         >
-            {/* 内容区 垂直居中 */}
-            <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col gap-16 py-20 justify-center flex-1">
+            <div className="w-full max-w-6xl mx-auto px-6">
+                {/* 标题区域 */}
                 <motion.div
-                    initial={{ opacity: 0, y: 60 }}
+                    initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, type: 'spring' }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    className="flex flex-col items-center mb-8"
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow mb-4 text-center">Encrypted Chat, Share the Crypto World</h2>
-                    <p className="text-lg md:text-xl text-blue-100 text-center max-w-2xl">Experience secure, end-to-end encrypted messaging. Share the latest in crypto, send USDT red packets or transfers right in your chat, and connect with the future of digital communication.</p>
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">MP Chat</h2>
+                    <p className="text-xl text-gray-600 mb-4">Peer-to-peer encrypted instant messaging</p>
+                    <p className="text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                        MP Chat is a peer-to-peer encrypted instant messaging service, ensuring your conversations
+                        remain private and secure.
+                    </p>
                 </motion.div>
-                <div className="flex flex-col gap-10 md:gap-16">
-                    <FeatureCard
-                        imgSrc="/5.webp"
-                        iconColor="#60a5fa"
-                        title="Truly Encrypted Chat"
-                        desc="All messages are end-to-end encrypted. No one can read your chat except you and your contacts. Enjoy private, secure, and worry-free conversations."
-                        align="left"
-                        imgAlt="Encrypted Chat Screenshot"
-                    />
-                    <FeatureCard
-                        imgSrc="/4.webp"
-                        iconColor="#f59e42"
-                        title="Share the Latest in Crypto"
-                        desc="Share news, trends, and insights from the crypto world. Discuss market moves, project updates, and more with your friends in real time."
-                        align="right"
-                        imgAlt="Crypto News Screenshot"
-                    />
-                    <FeatureCard
-                        imgSrc="/2.webp"
-                        iconColor="#34d399"
-                        title="Send USDT Red Packets & Transfers"
-                        desc="Send and receive USDT red packets or direct transfers in your chat. Fast, simple, and secure—empowering your crypto social life."
-                        align="left"
-                        imgAlt="USDT Red Packet Screenshot"
-                    />
+
+                {/* 主要内容区域 */}
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                    {/* 左侧手机界面 */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -60 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2, type: 'spring' }}
+                        viewport={{ once: true }}
+                        className="flex-1 flex justify-center"
+                    >
+                        {/* 手机外框 */}
+                        <div className="relative chat-phone">
+                            <div className="w-80 h-[600px] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                                {/* 手机屏幕 */}
+                                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                                    {/* 状态栏 */}
+                                    <div className="h-12 bg-gray-50 flex items-center justify-between px-6 text-sm text-gray-600">
+                                        <span>9:41</span>
+                                        <span>●●●</span>
+                                    </div>
+
+                                    {/* 聊天界面 */}
+                                    <div className="flex-1 bg-gray-50 p-4 space-y-4">
+                                        {/* 聊天标题 */}
+                                        <div className="text-center py-2">
+                                            <h3 className="font-semibold text-gray-800">Crypto Group</h3>
+                                        </div>
+
+                                        {/* 聊天消息 */}
+                                        <div className="space-y-3">
+                                            {/* 接收消息 */}
+                                            <div className="flex items-start space-x-2">
+                                                <div className="w-8 h-8 bg-blue-500 rounded-full flex-shrink-0"></div>
+                                                <div className="bg-white rounded-2xl rounded-tl-md px-4 py-2 max-w-[200px] shadow-sm">
+                                                    <p className="text-sm text-gray-800">
+                                                        Hey! Did you see BTC hit $50k?
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            {/* 发送消息 */}
+                                            <div className="flex justify-end">
+                                                <div className="bg-blue-500 text-white rounded-2xl rounded-tr-md px-4 py-2 max-w-[200px]">
+                                                    <p className="text-sm">Yes! Amazing news 🚀</p>
+                                                </div>
+                                            </div>
+
+                                            {/* 红包消息 */}
+                                            <div className="flex items-start space-x-2">
+                                                <div className="w-8 h-8 bg-green-500 rounded-full flex-shrink-0"></div>
+                                                <div className="bg-red-500 text-white rounded-2xl px-4 py-3 shadow-sm">
+                                                    <div className="flex items-center space-x-2">
+                                                        <span className="text-yellow-300">🧧</span>
+                                                        <div>
+                                                            <p className="text-sm font-medium">USDT Red Packet</p>
+                                                            <p className="text-xs opacity-90">Tap to open</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* 加密提示 */}
+                                            <div className="text-center py-2">
+                                                <div className="inline-flex items-center space-x-1 text-xs text-gray-500">
+                                                    <span>🔒</span>
+                                                    <span>End-to-end encrypted</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* 右侧功能介绍 */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 60 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4, type: 'spring' }}
+                        viewport={{ once: true }}
+                        className="flex-1 space-y-6 md:space-y-8 chat-features"
+                    >
+                        {/* 功能点1：端到端加密 */}
+                        <div className="flex items-start space-x-4">
+                            <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span className="text-white text-xl">🔒</span>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">End-to-End Encryption</h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    All messages are fully encrypted. Only you and your contacts can read your
+                                    conversations.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* 功能点2：加密货币集成 */}
+                        <div className="flex items-start space-x-4">
+                            <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span className="text-white text-xl">₿</span>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Crypto Integration</h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Share crypto news, market insights, and discuss the latest trends with your
+                                    community.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* 功能点3：USDT红包 */}
+                        <div className="flex items-start space-x-4">
+                            <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span className="text-white text-xl">🧧</span>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">USDT Red Packets</h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Send and receive USDT red packets directly in chat. Fast, secure, and fun way to
+                                    share crypto.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* 功能点4：即时转账 */}
+                        <div className="flex items-start space-x-4">
+                            <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span className="text-white text-xl">⚡</span>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Instant Transfers</h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Send crypto transfers instantly within your conversations. Simple, secure, and
+                                    seamless.
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
-    );
-} 
+    )
+}
