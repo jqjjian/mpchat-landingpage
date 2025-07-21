@@ -1,8 +1,53 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
+
+// 卡片数据
+const cards = [
+    {
+        id: 'physical',
+        type: 'Physical Card',
+        title: 'MP Card',
+        subtitle: 'Premium Metal Card',
+        number: '•••• •••• •••• 8756',
+        background: 'bg-gray-900',
+        chipColor: 'bg-yellow-500',
+        logoColor: 'text-white',
+        textColor: 'text-white',
+        badge: 'PHYSICAL',
+        badgeColor: 'bg-yellow-500/20 text-yellow-300',
+        shadow: 'shadow-2xl shadow-black/30',
+        border: 'border-gray-600/30'
+    },
+    {
+        id: 'virtual',
+        type: 'Virtual Card',
+        title: 'MP Card',
+        subtitle: 'Digital Payment Card',
+        number: '•••• •••• •••• 1234',
+        background: 'bg-blue-700',
+        chipColor: 'bg-cyan-400',
+        logoColor: 'text-white',
+        textColor: 'text-white',
+        badge: 'VIRTUAL',
+        badgeColor: 'bg-cyan-500/20 text-cyan-300',
+        shadow: 'shadow-2xl shadow-blue-500/20',
+        border: 'border-blue-400/30'
+    }
+]
 
 export default function CardFeatureSection() {
+    const [currentCardIndex, setCurrentCardIndex] = useState(0)
+
+    // 自动切换卡片
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentCardIndex(prev => (prev + 1) % cards.length)
+        }, 4000) // 每4秒切换一次
+
+        return () => clearInterval(timer)
+    }, [])
     return (
         <section
             id="card"
@@ -39,13 +84,103 @@ export default function CardFeatureSection() {
                     </p>
                 </motion.div>
 
+                {/* 核心卡片展示 */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="flex justify-center mb-16"
+                >
+                    <div className="relative w-[380px] h-[280px]">
+                        {cards.map((card, index) => {
+                            const isFront = index === currentCardIndex
+                            const isBack = index === (currentCardIndex + 1) % cards.length
+
+                            if (!isFront && !isBack) return null
+
+                            return (
+                                <motion.div
+                                    key={card.id}
+                                    initial={false}
+                                    animate={{
+                                        x: isFront ? 0 : 20,
+                                        y: isFront ? 0 : 20,
+                                        scale: isFront ? 1 : 0.95,
+                                        zIndex: isFront ? 20 : 10,
+                                        rotateY: isFront ? 0 : -5,
+                                        rotateX: isFront ? 0 : 5
+                                    }}
+                                    transition={{
+                                        duration: 0.8,
+                                        ease: 'easeInOut',
+                                        type: 'spring',
+                                        stiffness: 100
+                                    }}
+                                    className={`absolute top-0 left-0 w-[380px] h-[240px] rounded-3xl ${card.background} ${card.shadow} flex flex-col justify-between p-8 border ${card.border} overflow-hidden cursor-pointer`}
+                                    style={{
+                                        transformStyle: 'preserve-3d',
+                                        transformOrigin: 'center center'
+                                    }}
+                                    whileHover={isFront ? { scale: 1.02 } : {}}
+                                >
+                                    {/* 卡片背景纹理 */}
+                                    <div className="absolute inset-0 opacity-5">
+                                        <div className="absolute top-0 left-0 w-full h-full bg-white/10"></div>
+                                        <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/5 rounded-full"></div>
+                                    </div>
+
+                                    {/* 卡片顶部 */}
+                                    <div className="relative z-10 flex justify-between items-start">
+                                        <div>
+                                            <div className={`${card.textColor}/60 text-sm font-medium mb-2`}>
+                                                {card.subtitle}
+                                            </div>
+                                            <div className={`${card.textColor} text-xl font-bold font-display`}>
+                                                {card.title}
+                                            </div>
+                                        </div>
+
+                                        {/* 芯片 */}
+                                        <div
+                                            className={`w-12 h-8 ${card.chipColor} rounded-md flex items-center justify-center shadow-lg`}
+                                        >
+                                            <div className="w-8 h-6 bg-white/20 rounded-sm"></div>
+                                        </div>
+                                    </div>
+
+                                    {/* 卡片底部 */}
+                                    <div className="relative z-10 flex justify-between items-end">
+                                        <div className={`${card.textColor} text-lg font-mono tracking-wider`}>
+                                            {card.number}
+                                        </div>
+                                        <div
+                                            className={`text-xs font-medium ${card.badgeColor} px-3 py-1 rounded-full backdrop-blur-sm`}
+                                        >
+                                            {card.badge}
+                                        </div>
+                                    </div>
+
+                                    {/* Mastercard 标志 */}
+                                    <div className="absolute bottom-6 right-6">
+                                        <div className="flex items-center space-x-[-8px]">
+                                            <div className="w-8 h-8 bg-red-500 rounded-full opacity-90"></div>
+                                            <div className="w-8 h-8 bg-yellow-500 rounded-full opacity-90"></div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            )
+                        })}
+                    </div>
+                </motion.div>
+
                 {/* 核心价值说明 */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                     viewport={{ once: true }}
-                    className="w-full max-w-5xl mb-16"
+                    className="w-full max-w-5xl"
                 >
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                         <div className="flex flex-col items-center text-center">
@@ -112,35 +247,6 @@ export default function CardFeatureSection() {
                             <p className="text-blue-100 text-base leading-relaxed">
                                 Accepted worldwide wherever cards are supported
                             </p>
-                        </div>
-                    </div>
-                </motion.div>
-
-                {/* 核心卡片展示 */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="flex justify-center"
-                >
-                    <div className="w-[380px] h-[240px] rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 shadow-2xl flex flex-col justify-between p-8 border border-white/10 relative overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300">
-                        {/* 卡片装饰 */}
-                        <div className="absolute top-6 right-6">
-                            <div className="w-12 h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-md flex items-center justify-center">
-                                <span className="text-white text-xs font-bold">MP</span>
-                            </div>
-                        </div>
-
-                        {/* 卡片信息 */}
-                        <div className="flex flex-col">
-                            <div className="text-white/60 text-sm font-medium mb-8">Digital Payment Card</div>
-                            <div className="flex justify-between items-end">
-                                <div className="text-white text-lg font-mono tracking-wider">•••• •••• •••• 1234</div>
-                                <div className="text-white/80 text-xs font-medium bg-white/10 px-3 py-1 rounded-full">
-                                    VIRTUAL
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </motion.div>

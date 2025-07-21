@@ -11,13 +11,13 @@ export default function Footer() {
                     <div className="mb-6 md:mb-0 min-w-[200px] flex flex-col items-center md:items-start">
                         <div className="font-bold text-xl mb-4">Get the App</div>
                         <div className="bg-white p-3 rounded-lg">
-                            {/* <Image
+                            <Image
                                 src=""
                                 alt="Download App QR Code"
                                 className="w-[120px] h-[120px]"
                                 width={120}
                                 height={120}
-                            /> */}
+                            />
                         </div>
                         <p className="text-xs text-neutral-400 mt-2 text-center md:text-left">Scan to download</p>
                     </div>

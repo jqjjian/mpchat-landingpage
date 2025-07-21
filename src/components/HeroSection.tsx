@@ -81,37 +81,17 @@ export default function HeroSection() {
                             <span className="text-sm sm:text-base font-bold text-white mb-2 sm:mb-0 sm:mr-2 md:mr-4">
                                 Get the app
                             </span>
-                            <div className="app-store-buttons flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
+                            <div className="app-store-buttons flex justify-center sm:justify-start w-full sm:w-auto">
                                 <a
                                     href="#"
-                                    className="flex items-center justify-center px-3 sm:px-5 py-2 sm:py-3 rounded-xl bg-white text-neutral-800 font-bold text-sm sm:text-base shadow-lg gap-1 sm:gap-2 hover:bg-neutral-100 transition min-w-0 flex-1 sm:flex-none"
-                                >
-                                    <svg
-                                        width="18"
-                                        height="18"
-                                        viewBox="0 0 32 32"
-                                        fill="none"
-                                        className="flex-shrink-0"
-                                    >
-                                        <path
-                                            d="M23.6 17.2c-.1-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.3 2 2.7 3.4 2.6 1.4-.1 1.9-.8 3.6-.8 1.7 0 2.1.8 3.5.8 1.4 0 2.3-1.3 3.2-2.6.6-.9.8-1.3 1.2-2.3-3.1-1.2-3.6-4.5-3.6-4.6zm-3.4-8.6c.7-.8 1.2-2 1-3.2-1 .1-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 .1.1 1.2.2 2.9-1.3z"
-                                            fill="#111"
-                                        />
-                                    </svg>
-                                    <span className="truncate">APP STORE</span>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="flex items-center justify-center px-3 sm:px-5 py-2 sm:py-3 rounded-xl bg-white text-neutral-800 font-bold text-sm sm:text-base shadow-lg gap-1 sm:gap-2 hover:bg-neutral-100 transition min-w-0 flex-1 sm:flex-none"
+                                    className="relative w-40 h-12 flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 rounded-xl bg-white text-neutral-800 font-bold text-sm sm:text-base shadow-lg hover:bg-neutral-100 transition"
                                 >
                                     <Image
-                                        src="/Google.ee741aca.svg"
-                                        alt="Google"
-                                        className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
-                                        width={20}
-                                        height={20}
+                                        src="/Google_Play-Logo.wine.svg"
+                                        alt="Google Play"
+                                        className="w-6 h-6 sm:w-7 sm:h-7 "
+                                        layout="fill"
                                     />
-                                    <span className="truncate">GOOGLE PLAY</span>
                                 </a>
                             </div>
                         </motion.div>
