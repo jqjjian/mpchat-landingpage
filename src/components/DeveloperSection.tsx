@@ -130,7 +130,7 @@ client.chat.onMessage((message) => {
 
             <div
                 className="relative z-10 w-full flex flex-col items-center px-4 py-20"
-                style={{ maxWidth: 1300, margin: '0 auto' }}
+                style={{ maxWidth: 1700, margin: '0 auto' }}
             >
                 {/* 主标题+副标题 */}
                 <motion.h2
@@ -321,6 +321,23 @@ client.chat.onMessage((message) => {
                     </motion.button>
                 </motion.div>
             </div>
+            <style jsx>{`
+                @media (min-width: 768px) {
+                    div[style*='max-width: 1700px'] {
+                        max-width: 1200px !important;
+                    }
+                }
+                @media (min-width: 1920px) {
+                    div[style*='max-width: 1700px'] {
+                        max-width: 1250px !important;
+                    }
+                }
+                @media (min-width: 2520px) {
+                    div[style*='max-width: 1700px'] {
+                        max-width: 1432px !important;
+                    }
+                }
+            `}</style>
         </section>
     )
 }

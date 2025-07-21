@@ -4,24 +4,9 @@ import { Parallax } from 'react-scroll-parallax'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-const BG_IMAGES = ['/pg1.webp', '/pexels-asphotograpy-230544.webp']
-
 export default function HeroSection() {
-    const [bgIdx, setBgIdx] = useState(0)
-    const [fade, setFade] = useState(false)
     const [isMobile, setIsMobile] = useState(false)
     const [isTablet, setIsTablet] = useState(false)
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setFade(true)
-            setTimeout(() => {
-                setBgIdx(idx => (idx + 1) % BG_IMAGES.length)
-                setFade(false)
-            }, 300) // 动画持续300ms
-        }, 10000) // 10秒切换
-        return () => clearInterval(interval)
-    }, [])
 
     // 检测屏幕宽度
     useEffect(() => {
@@ -37,12 +22,11 @@ export default function HeroSection() {
 
     return (
         <section className="hero-section relative h-screen flex items-center justify-center pt-16 overflow-hidden">
-            {/* 背景图片淡入淡出 */}
+            {/* 背景图片 */}
             <div
-                className="absolute inset-0 z-0 transition-opacity duration-700"
+                className="absolute inset-0 z-0"
                 style={{
-                    opacity: fade ? 0 : 1,
-                    backgroundImage: `url(${BG_IMAGES[bgIdx]})`,
+                    backgroundImage: `url(/pexels-energepic-com-27411-2988232.webp)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat'
@@ -52,7 +36,7 @@ export default function HeroSection() {
             <div
                 className="w-full flex flex-col items-center justify-between px-4 sm:px-6 relative z-20 mx-auto"
                 style={{
-                    maxWidth: 1200,
+                    maxWidth: 1700,
                     width: '100%',
                     minWidth: 0,
                     flexDirection: isMobile ? 'column' : 'row'
@@ -71,7 +55,7 @@ export default function HeroSection() {
                             initial={{ opacity: 0, x: -80 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, type: 'spring' }}
-                            className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-[110px] font-extrabold mb-3 sm:mb-4 md:mb-5 lg:mb-6 drop-shadow-lg leading-tight font-sans text-white"
+                            className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-[110px] font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 drop-shadow-lg leading-tight font-display text-white tracking-tight"
                         >
                             LIVE WITH CRYPTO
                         </motion.h1>
@@ -81,7 +65,7 @@ export default function HeroSection() {
                             initial={{ opacity: 0, x: -40 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.2, type: 'spring' }}
-                            className="hero-description text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-medium mb-4 sm:mb-6 md:mb-6 lg:mb-8 xl:mb-10 text-white/90 leading-relaxed pt-2 sm:pt-4 md:pt-6 lg:pt-12 xl:pt-20"
+                            className="hero-description text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-normal mb-4 sm:mb-6 md:mb-6 lg:mb-8 xl:mb-10 text-white/90 leading-relaxed pt-2 sm:pt-4 md:pt-6 lg:pt-12 xl:pt-20"
                         >
                             MP seamlessly blends secure encrypted chat, an easy-to-use crypto wallet, and a globally
                             accepted payment card. Effortlessly send, manage, and spend your crypto assets – start truly
@@ -124,6 +108,8 @@ export default function HeroSection() {
                                         src="/Google.ee741aca.svg"
                                         alt="Google"
                                         className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                                        width={20}
+                                        height={20}
                                     />
                                     <span className="truncate">GOOGLE PLAY</span>
                                 </a>
@@ -149,6 +135,8 @@ export default function HeroSection() {
                                     src="/1.webp"
                                     alt="MP"
                                     className="max-w-full h-auto"
+                                    width={400}
+                                    height={400}
                                     style={{
                                         width: isTablet ? '280px' : '400px',
                                         height: 'auto'
@@ -161,17 +149,17 @@ export default function HeroSection() {
             </div>
             <style jsx>{`
                 @media (min-width: 768px) {
-                    div[style*='max-width: 1200px'] {
+                    div[style*='max-width: 1700px'] {
                         max-width: 1200px !important;
                     }
                 }
                 @media (min-width: 1920px) {
-                    div[style*='max-width: 1200px'] {
+                    div[style*='max-width: 1700px'] {
                         max-width: 1250px !important;
                     }
                 }
                 @media (min-width: 2520px) {
-                    div[style*='max-width: 1200px'] {
+                    div[style*='max-width: 1700px'] {
                         max-width: 1432px !important;
                     }
                 }

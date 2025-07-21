@@ -11,7 +11,7 @@ const navs = [
     // { id: "dev", label: "Developers" },
 ]
 
-const QR_CODE_URL = 'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://mpchat.app/download' // 占位二维码
+const QR_CODE_URL = '' //'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://mpchat.app/download' // 占位二维码
 
 // function getSectionTop(id: string) {
 //     const el = document.getElementById(id)
@@ -173,7 +173,7 @@ export default function Navbar() {
                             }
                         }}
                     >
-                        <Image src="/logo.6c0933db.png" alt="logo" className="h-9 w-auto" />
+                        <Image src="/logo.6c0933db.png" alt="logo" className="h-9 w-auto" width={36} height={36} />
                         <span className="font-bold text-xl text-white tracking-wide">MPChat</span>
                     </div>
                     {/* 桌面端菜单 - 1300px以上显示 */}
@@ -263,7 +263,13 @@ export default function Navbar() {
                                     onMouseEnter={() => setShowQR(true)}
                                     onMouseLeave={() => setShowQR(false)}
                                 >
-                                    <Image src={QR_CODE_URL} alt="Download App QR" className="w-32 h-32 mb-2" />
+                                    <Image
+                                        src={QR_CODE_URL}
+                                        alt="Download App QR"
+                                        className="w-32 h-32 mb-2"
+                                        width={128}
+                                        height={128}
+                                    />
                                     <div className="text-xs text-gray-500">Scan to download</div>
                                 </div>
                             )}
@@ -344,7 +350,13 @@ export default function Navbar() {
                         </button>
                         {showQR && (
                             <div className="mt-4 flex flex-col items-center p-4 bg-white rounded-xl">
-                                <Image src={QR_CODE_URL} alt="Download App QR" className="w-32 h-32 mb-2" />
+                                <Image
+                                    src={QR_CODE_URL}
+                                    alt="Download App QR"
+                                    className="w-32 h-32 mb-2"
+                                    width={128}
+                                    height={128}
+                                />
                                 <div className="text-xs text-gray-500">Scan to download</div>
                             </div>
                         )}

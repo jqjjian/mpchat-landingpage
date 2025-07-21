@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 const sections = [
     {
-        title: 'A cryptocurrency wallet under a trust-compliant framework',
-        desc: 'MP Wallet is a cryptocurrency wallet operating under a trust-compliant framework, providing a secure and regulated way to manage your digital assets.',
+        title: 'Institutional-Grade Security',
+        desc: 'MP Wallet employs advanced multi-signature technology and hardware security modules to protect your assets with institutional-grade security standards.',
         bg: '/3.webp'
     }
 ]
@@ -38,7 +38,7 @@ export default function WalletFeatureSection() {
         <section
             id="wallet"
             className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden"
-            style={{ background: 'linear-gradient(135deg, #2a1746 0%, #1a1a2e 60%, #1e2a4a 100%)' }}
+            style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}
         >
             {/* 背景科技感粒子/微光 */}
             <div className="absolute inset-0 pointer-events-none z-0">
@@ -54,16 +54,23 @@ export default function WalletFeatureSection() {
                     </circle>
                 </svg>
             </div>
-            <div className="relative z-10 w-full flex flex-col items-center px-4 py-20" style={{ maxWidth: 1300 }}>
-                <motion.h2
+            <div className="relative z-10 w-full flex flex-col items-center px-4 py-20" style={{ maxWidth: 1700 }}>
+                <motion.div
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, type: 'spring' }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-5xl font-bold text-white mb-16 text-center drop-shadow-lg"
+                    className="text-center mb-20"
                 >
-                    MP Wallet
-                </motion.h2>
+                    <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 font-display tracking-tight drop-shadow-lg">
+                        MP Wallet
+                    </h2>
+                    <p className="text-2xl text-blue-100 mb-6 font-medium">Trust. Security. Compliance.</p>
+                    <p className="text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
+                        Experience institutional-grade security with regulatory compliance, designed for the modern
+                        crypto investor.
+                    </p>
+                </motion.div>
                 <div className="w-full flex flex-col gap-16">
                     {sections.map((s, i) => (
                         <motion.div
@@ -80,12 +87,12 @@ export default function WalletFeatureSection() {
                             }`}
                         >
                             {/* 内容区域 */}
-                            <div className="flex-1 flex flex-col items-center md:items-start px-4 md:px-8">
+                            <div className="flex-1 flex flex-col items-center md:items-start px-4 md:px-12">
                                 <motion.h3
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={visibleIdx >= i ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                                     transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-                                    className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight text-center md:text-left"
+                                    className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight text-center md:text-left font-display"
                                 >
                                     {s.title}
                                 </motion.h3>
@@ -93,7 +100,7 @@ export default function WalletFeatureSection() {
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={visibleIdx >= i ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                                     transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
-                                    className="text-lg text-blue-200 leading-relaxed max-w-lg text-center md:text-left"
+                                    className="text-xl text-blue-100 leading-relaxed max-w-2xl text-center md:text-left"
                                 >
                                     {s.desc}
                                 </motion.p>
@@ -113,9 +120,9 @@ export default function WalletFeatureSection() {
                                     <Image
                                         src={s.bg}
                                         alt="MP Wallet Interface"
-                                        width={384}
+                                        width={484}
                                         height={216}
-                                        className="w-80 md:w-96 h-auto rounded-2xl shadow-2xl border border-white/10 transition-all duration-300 group-hover:shadow-3xl"
+                                        className=" h-auto rounded-2xl   transition-all duration-300 group-hover:shadow-3xl"
                                         priority
                                     />
                                     {/* 光晕效果 */}
@@ -126,6 +133,23 @@ export default function WalletFeatureSection() {
                     ))}
                 </div>
             </div>
+            <style jsx>{`
+                @media (min-width: 768px) {
+                    div[style*='max-width: 1700px'] {
+                        max-width: 1200px !important;
+                    }
+                }
+                @media (min-width: 1920px) {
+                    div[style*='max-width: 1700px'] {
+                        max-width: 1250px !important;
+                    }
+                }
+                @media (min-width: 2520px) {
+                    div[style*='max-width: 1700px'] {
+                        max-width: 1432px !important;
+                    }
+                }
+            `}</style>
         </section>
     )
 }
