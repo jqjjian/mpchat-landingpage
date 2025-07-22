@@ -11,7 +11,7 @@ const navs = [
     // { id: "dev", label: "Developers" },
 ]
 
-const QR_CODE_URL = '' //'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://mpchat.app/download' // 占位二维码
+const QR_CODE_URL = '/qrcode.png' //'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://mpchat.app/download' // 占位二维码
 
 // function getSectionTop(id: string) {
 //     const el = document.getElementById(id)
@@ -173,7 +173,9 @@ export default function Navbar() {
                             }
                         }}
                     >
-                        <Image src="/logo.6c0933db.png" alt="logo" className="h-9 w-auto" width={36} height={36} />
+                        <div className="w-10 h-10 relative">
+                            <Image src="/logo.svg" alt="logo" layout="fill" />
+                        </div>
                         <span
                             className="font-bold text-xl text-white tracking-wide"
                             style={{ fontFamily: 'var(--font-redotpay)', fontWeight: 700 }}

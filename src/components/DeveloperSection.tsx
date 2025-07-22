@@ -1,29 +1,38 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Link, MessageCircle, Wallet, Globe } from 'lucide-react'
 
 export default function DeveloperSection() {
+    // 图标映射
+    const iconMap = {
+        apis: Link,
+        communications: MessageCircle,
+        payments: Wallet,
+        social: Globe
+    } as const
+
     const features = [
         {
-            icon: '🔗',
+            icon: 'apis',
             title: 'APIs & SDKs',
             description: 'Comprehensive REST APIs and SDKs for multiple programming languages',
             details: ['RESTful APIs', 'JavaScript SDK', 'Python SDK', 'React Components']
         },
         {
-            icon: '💬',
+            icon: 'communications',
             title: 'Secure Communications',
             description: 'End-to-end encrypted messaging and real-time communication features',
             details: ['E2E Encryption', 'Real-time Chat', 'Voice & Video', 'File Sharing']
         },
         {
-            icon: '💰',
+            icon: 'payments',
             title: 'Crypto Payments',
             description: 'Seamless integration of cryptocurrency payment solutions',
             details: ['Multi-chain Support', 'Instant Settlement', 'Low Fees', 'DeFi Integration']
         },
         {
-            icon: '🌐',
+            icon: 'social',
             title: 'Social Features',
             description: 'Social sharing and engagement tools for community building',
             details: ['Social Login', 'Content Sharing', 'Community Tools', 'Analytics']
@@ -231,9 +240,12 @@ client.chat.onMessage((message) => {
                                     <motion.div
                                         whileHover={{ scale: 1.1, rotate: 5 }}
                                         transition={{ duration: 0.2 }}
-                                        className="text-4xl"
+                                        className="text-white"
                                     >
-                                        {feature.icon}
+                                        {(() => {
+                                            const IconComponent = iconMap[feature.icon as keyof typeof iconMap]
+                                            return <IconComponent className="w-10 h-10" />
+                                        })()}
                                     </motion.div>
                                     <div>
                                         <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-200 transition-colors duration-300">

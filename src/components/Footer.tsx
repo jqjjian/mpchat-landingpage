@@ -12,7 +12,7 @@ export default function Footer() {
                         <div className="font-bold text-xl mb-4">Get the App</div>
                         <div className="bg-white p-3 rounded-lg">
                             <Image
-                                src=""
+                                src="/qrcode.png"
                                 alt="Download App QR Code"
                                 className="w-[120px] h-[120px]"
                                 width={120}
@@ -111,7 +111,9 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-6 gap-4 border-b border-neutral-700 pb-4">
                     {/* Logo */}
                     <div className="flex items-center gap-3">
-                        <Image src="/logo.6c0933db.png" alt="MP Logo" width={32} height={32} className="h-8 w-auto" />
+                        <div className="w-8 h-8 relative">
+                            <Image src="logo.svg" alt="MP Logo" layout="fill" />
+                        </div>
                         <span className="font-bold text-lg text-white">MPChat</span>
                     </div>
 
