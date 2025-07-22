@@ -29,7 +29,7 @@ export default function Navbar() {
     const [navHover, setNavHover] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-    const navRefs = useRef<(HTMLButtonElement | null)[]>([])
+    const navRefs = useRef<(HTMLElement | null)[]>([])
 
     // 滚动监听，自动高亮当前模块
     useEffect(() => {
@@ -147,7 +147,7 @@ export default function Navbar() {
         </div>
     )
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 font-sans">
+        <nav className="fixed top-0 left-0 w-full z-50" style={{ fontFamily: 'var(--font-redotpay)' }}>
             <div
                 className={`w-full transition-colors duration-300 ${
                     navHover || scrolled ? 'bg-black/30' : 'bg-transparent'
@@ -174,7 +174,12 @@ export default function Navbar() {
                         }}
                     >
                         <Image src="/logo.6c0933db.png" alt="logo" className="h-9 w-auto" width={36} height={36} />
-                        <span className="font-bold text-xl text-white tracking-wide">MPChat</span>
+                        <span
+                            className="font-bold text-xl text-white tracking-wide"
+                            style={{ fontFamily: 'var(--font-redotpay)', fontWeight: 700 }}
+                        >
+                            MPChat
+                        </span>
                     </div>
                     {/* 桌面端菜单 - 1300px以上显示 */}
                     <div className="relative flex-1 justify-center desktop-menu">
@@ -193,7 +198,7 @@ export default function Navbar() {
                             />
                             {navs.map((nav, idx) => (
                                 <li key={nav.id} className="relative">
-                                    <button
+                                    <div
                                         ref={el => {
                                             navRefs.current[idx] = el
                                         }}
@@ -209,10 +214,17 @@ export default function Navbar() {
                                             }
                                         }}
                                         tabIndex={0}
+                                        role="button"
                                         aria-label={`Navigate to ${nav.label} section`}
+                                        style={{
+                                            fontFamily: 'var(--font-redotpay)',
+                                            fontWeight: active === nav.id ? 700 : 400,
+                                            border: 'none',
+                                            background: 'transparent'
+                                        }}
                                     >
                                         {nav.label}
-                                    </button>
+                                    </div>
                                 </li>
                             ))}
                         </ul>
@@ -225,6 +237,7 @@ export default function Navbar() {
                                 onMouseEnter={() => setShowLangList(true)}
                                 onMouseLeave={() => setShowLangList(false)}
                                 onClick={() => setShowLangList(v => !v)}
+                                style={{ fontFamily: 'var(--font-redotpay)', fontWeight: 700 }}
                             >
                                 EN
                                 <svg
@@ -254,6 +267,7 @@ export default function Navbar() {
                                 onMouseEnter={() => setShowQR(true)}
                                 onMouseLeave={() => setShowQR(false)}
                                 onClick={() => setShowQR(v => !v)}
+                                style={{ fontFamily: 'var(--font-redotpay)', fontWeight: 700 }}
                             >
                                 Download App
                             </button>
@@ -305,13 +319,17 @@ export default function Navbar() {
                 <div className="px-6 py-4 space-y-4">
                     {/* 移动端菜单项 */}
                     {navs.map((nav, index) => (
-                        <button
+                        <div
                             key={nav.id}
-                            className={`block w-full text-left px-6 py-4 text-white text-lg font-medium transition-all duration-300 ${
+                            className={`block w-full text-left px-6 py-4 text-white text-lg font-medium transition-all duration-300 cursor-pointer ${
                                 active === nav.id ? 'font-bold' : 'font-normal'
                             } ${isMobileMenuOpen ? 'animate-slide-in' : ''}`}
                             style={{
-                                animationDelay: `${index * 100}ms`
+                                animationDelay: `${index * 100}ms`,
+                                fontFamily: 'var(--font-redotpay)',
+                                fontWeight: active === nav.id ? 700 : 400,
+                                border: 'none',
+                                background: 'transparent'
                             }}
                             onClick={() => handleClick(nav.id)}
                             onKeyDown={e => {
@@ -321,33 +339,40 @@ export default function Navbar() {
                                 }
                             }}
                             tabIndex={0}
+                            role="button"
                             aria-label={`Navigate to ${nav.label} section`}
                         >
                             <span className="flex items-center gap-3">
                                 <span className="w-2 h-2 bg-white/60 rounded-full"></span>
                                 {nav.label}
                             </span>
-                        </button>
+                        </div>
                     ))}
 
                     {/* 移动端：语言切换 */}
                     <div className="border-t border-white/20 pt-4">
-                        <button
-                            className="block w-full text-left px-4 py-3 text-white text-lg font-medium rounded-lg hover:bg-white/10 transition-colors"
+                        <div
+                            className="block w-full text-left px-4 py-3 text-white text-lg font-medium rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
                             onClick={() => setShowLangList(!showLangList)}
+                            role="button"
+                            tabIndex={0}
+                            style={{ fontFamily: 'var(--font-redotpay)', fontWeight: 700 }}
                         >
                             Language: EN
-                        </button>
+                        </div>
                     </div>
 
                     {/* 移动端：下载按钮 */}
                     <div className="pt-2">
-                        <button
-                            className="w-full px-4 py-3 rounded-full border border-white text-white font-bold transition bg-transparent hover:bg-white hover:text-black"
+                        <div
+                            className="w-full px-4 py-3 rounded-full border border-white text-white font-bold transition bg-transparent hover:bg-white hover:text-black cursor-pointer text-center"
                             onClick={() => setShowQR(!showQR)}
+                            role="button"
+                            tabIndex={0}
+                            style={{ fontFamily: 'var(--font-redotpay)', fontWeight: 700 }}
                         >
                             Download App
-                        </button>
+                        </div>
                         {showQR && (
                             <div className="mt-4 flex flex-col items-center p-4 bg-white rounded-xl">
                                 <Image
