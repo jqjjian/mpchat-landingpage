@@ -83,7 +83,7 @@ export default function HeroSection() {
                             </span>
                             <div className="app-store-buttons flex justify-center sm:justify-start w-full sm:w-auto">
                                 <a
-                                    href="#"
+                                    href="https://sukkdl.oss-accelerate.aliyuncs.com/MP.apk"
                                     className="relative w-40 h-12 flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 rounded-xl bg-white text-neutral-800 font-bold text-sm sm:text-base shadow-lg hover:bg-neutral-100 transition"
                                 >
                                     <Image
