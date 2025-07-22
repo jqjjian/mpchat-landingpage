@@ -111,8 +111,9 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-6 gap-4 border-b border-neutral-700 pb-4">
                     {/* Logo */}
                     <div className="flex items-center gap-3">
+                        {/* Logo */}
                         <div className="w-8 h-8 relative">
-                            <Image src="logo.svg" alt="MP Logo" layout="fill" />
+                            <Image src="/logo.svg" alt="MP Logo" layout="fill" />
                         </div>
                         <span className="font-bold text-lg text-white">MPChat</span>
                     </div>

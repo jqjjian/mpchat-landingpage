@@ -13,12 +13,12 @@ const navs = [
 
 const QR_CODE_URL = '/qrcode.png' //'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://mpchat.app/download' // 占位二维码
 
-function getSectionTop(id: string) {
-    const el = document.getElementById(id)
-    if (!el) return 0
-    const rect = el.getBoundingClientRect()
-    return rect.top + window.scrollY
-}
+// function getSectionTop(id: string) {
+//     const el = document.getElementById(id)
+//     if (!el) return 0
+//     const rect = el.getBoundingClientRect()
+//     return rect.top + window.scrollY
+// }
 
 export default function Navbar() {
     const [active, setActive] = useState('')
@@ -173,8 +173,9 @@ export default function Navbar() {
                             }
                         }}
                     >
+                        {/* Logo */}
                         <div className="w-10 h-10 relative">
-                            <Image src="/logo.svg" alt="logo" layout="fill" />
+                            <Image src="/logo.svg" alt="MP logo" layout="fill" />
                         </div>
                         <span
                             className="font-bold text-xl text-white tracking-wide"
