@@ -1,69 +1,118 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Link, MessageCircle, Wallet, Globe } from 'lucide-react'
+import {
+    MessageCircle,
+    Shield,
+    Zap,
+    Code,
+    BookOpen,
+    Users,
+    Headphones,
+    Palette,
+    ArrowRight,
+    CheckCircle
+} from 'lucide-react'
 
 export default function DeveloperSection() {
-    // 图标映射
-    const iconMap = {
-        apis: Link,
-        communications: MessageCircle,
-        payments: Wallet,
-        social: Globe
-    } as const
-
-    const features = [
+    // Core Features
+    const coreFeatures = [
         {
-            icon: 'apis',
-            title: 'APIs & SDKs',
-            description: 'Comprehensive REST APIs and SDKs for multiple programming languages',
-            details: ['RESTful APIs', 'JavaScript SDK', 'Python SDK', 'React Components']
+            icon: MessageCircle,
+            title: 'Native Social Integration',
+            description: 'Seamlessly integrate chat, groups, and social features into your application',
+            highlights: ['Real-time Messaging', 'Group Management', 'Social Login', 'Content Sharing']
         },
         {
-            icon: 'communications',
-            title: 'Secure Communications',
-            description: 'End-to-end encrypted messaging and real-time communication features',
-            details: ['E2E Encryption', 'Real-time Chat', 'Voice & Video', 'File Sharing']
+            icon: Shield,
+            title: 'Seamless Crypto Functionality',
+            description: 'Enterprise-grade security with digital asset management and encrypted communications',
+            highlights: ['End-to-End Encryption', 'Digital Assets', 'Secure Payments', 'Privacy Protection']
         },
         {
-            icon: 'payments',
-            title: 'Crypto Payments',
-            description: 'Seamless integration of cryptocurrency payment solutions',
-            details: ['Multi-chain Support', 'Instant Settlement', 'Low Fees', 'DeFi Integration']
+            icon: Zap,
+            title: 'Lightweight MiniApp Experience',
+            description: 'High-performance, low-resource application development experience',
+            highlights: ['Fast Launch', 'Low Memory Usage', 'Smooth Experience', 'Cross-platform Support']
         },
         {
-            icon: 'social',
-            title: 'Social Features',
-            description: 'Social sharing and engagement tools for community building',
-            details: ['Social Login', 'Content Sharing', 'Community Tools', 'Analytics']
+            icon: Code,
+            title: 'Developer-Friendly Environment',
+            description: 'Complete SDK, detailed documentation, and rich development tools',
+            highlights: ['Complete SDK', 'API Documentation', 'Code Examples', 'Development Tools']
         }
     ]
 
-    const stats = [
-        { number: '99.9%', label: 'Uptime SLA', suffix: '' },
-        { number: '50', label: 'API Endpoints', suffix: '+' },
-        { number: '10', label: 'Programming Languages', suffix: '+' },
-        { number: '24/7', label: 'Developer Support', suffix: '' }
+    // Quick Start Steps
+    const quickStartSteps = [
+        {
+            step: '1',
+            title: 'Create Developer Account',
+            description: 'Register on the MPChat Developer Platform',
+            action: 'Sign Up Now'
+        },
+        {
+            step: '2',
+            title: 'Create Your Application',
+            description: 'Configure application parameters and permissions',
+            action: 'Create App'
+        },
+        {
+            step: '3',
+            title: 'Integrate SDK & Start Building',
+            description: 'Use APIs and SDKs to build powerful features',
+            action: 'View SDK Docs'
+        }
     ]
 
-    const codeExample = `// Initialize MP SDK
-import { MPClient } from '@mp/sdk'
+    // Developer Resources
+    const developerResources = [
+        {
+            icon: BookOpen,
+            title: 'Comprehensive Documentation',
+            description: 'API references, tutorials, guides, and best practice examples',
+            link: 'View Docs'
+        },
+        {
+            icon: Users,
+            title: 'Active Developer Community',
+            description: 'Technical discussions, Q&A, developer events and updates',
+            link: 'Join Community'
+        },
+        {
+            icon: Palette,
+            title: 'Design Resources',
+            description: 'UI components, design guidelines, icons and asset libraries',
+            link: 'Download Resources'
+        },
+        {
+            icon: Headphones,
+            title: 'Professional Developer Support',
+            description: '24/7 technical support with dedicated team assistance',
+            link: 'Contact Support'
+        }
+    ]
 
-const client = new MPClient({
+    const codeExample = `// Initialize MPChat SDK
+import { MPChatClient } from '@mpchat/sdk'
+
+const client = new MPChatClient({
   apiKey: 'your-api-key',
   environment: 'production'
 })
 
-// Send crypto payment
-const payment = await client.payments.create({
+// Send encrypted message
+const message = await client.chat.sendMessage({
+  to: 'user-id',
+  content: 'Hello from MPChat!',
+  encrypted: true
+})
+
+// Create crypto transaction
+const transaction = await client.crypto.transfer({
   amount: 100,
   currency: 'USDC',
   recipient: 'wallet-address'
-})
-
-// Real-time messaging
-client.chat.onMessage((message) => {
-  console.log('New message:', message)
 })`
 
     return (
@@ -101,7 +150,7 @@ client.chat.onMessage((message) => {
                         }}
                         className="text-blue-300 font-mono text-sm"
                     >
-                        {'{ "api": "v2.0" }'}
+                        {'{ "mpchat": "sdk" }'}
                     </motion.div>
                 </div>
 
@@ -119,7 +168,7 @@ client.chat.onMessage((message) => {
                         }}
                         className="text-purple-300 font-mono text-sm"
                     >
-                        {'<SDK />'}
+                        {'<MPChat />'}
                     </motion.div>
                 </div>
 
@@ -141,84 +190,75 @@ client.chat.onMessage((message) => {
                 className="relative z-10 w-full flex flex-col items-center px-4 py-20"
                 style={{ maxWidth: 1700, margin: '0 auto' }}
             >
-                {/* 主标题+副标题 */}
+                {/* Hero Section */}
                 <motion.h2
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, type: 'spring' }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-5xl font-bold text-white mb-6 text-center drop-shadow-lg"
+                    className="text-4xl md:text-6xl font-bold text-white mb-6 text-center drop-shadow-lg"
                 >
-                    MP Developer
+                    🚀 Build the Next Generation Social Ecosystem
                 </motion.h2>
-
-                <motion.h3
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.1, type: 'spring' }}
-                    viewport={{ once: true }}
-                    className="text-2xl md:text-3xl font-semibold text-blue-100 mb-4 text-center"
-                >
-                    Build applications that define the crypto experience
-                </motion.h3>
 
                 <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2, type: 'spring' }}
                     viewport={{ once: true }}
-                    className="text-lg text-blue-200 mb-16 text-center max-w-4xl leading-relaxed"
+                    className="text-lg text-blue-200 mb-12 text-center max-w-4xl leading-relaxed"
                 >
-                    {`MP Developer provides the APIs, SDKs, and support for you to create innovative applications.
-                    Seamlessly integrate secure communications, crypto payments, and social sharing and engagement
-                    features to build what's next for users in the MP ecosystem.`}
+                    Leverage MPChat&apos;s powerful APIs and MiniApp framework to seamlessly integrate secure
+                    communications, digital asset management, and innovative social experiences into your applications
                 </motion.p>
 
-                {/* 统计数据 */}
+                {/* CTA Buttons */}
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
                     viewport={{ once: true }}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 w-full max-w-4xl"
+                    className="flex flex-col sm:flex-row gap-4 mb-20"
                 >
-                    {stats.map((stat, i) => (
-                        <motion.div
-                            key={stat.label}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{
-                                duration: 0.6,
-                                delay: i * 0.1 + 0.4,
-                                type: 'spring',
-                                bounce: 0.4
-                            }}
-                            viewport={{ once: true }}
-                            className="text-center"
-                        >
-                            <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                                {stat.number}
-                                {stat.suffix}
-                            </div>
-                            <div className="text-blue-200 text-sm">{stat.label}</div>
-                        </motion.div>
-                    ))}
+                    <motion.button
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+                    >
+                        Start Building
+                    </motion.button>
+
+                    <motion.button
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/30 hover:border-white/50 transition-all duration-300"
+                    >
+                        View Documentation
+                    </motion.button>
+
+                    <motion.button
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-8 py-4 bg-purple-600/20 hover:bg-purple-600/30 text-white font-semibold rounded-xl border border-purple-400/30 hover:border-purple-400/50 transition-all duration-300"
+                    >
+                        Try Online
+                    </motion.button>
                 </motion.div>
 
-                {/* 功能特性网格 */}
+                {/* Core Features */}
                 <div className="w-full max-w-6xl mb-20">
                     <motion.h3
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="text-2xl font-semibold text-white mb-12 text-center"
+                        className="text-3xl font-semibold text-white mb-12 text-center"
                     >
-                        Powerful Developer Tools
+                        Core Technology Features
                     </motion.h3>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {features.map((feature, i) => (
+                        {coreFeatures.map((feature, i) => (
                             <motion.div
                                 key={feature.title}
                                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -242,10 +282,7 @@ client.chat.onMessage((message) => {
                                         transition={{ duration: 0.2 }}
                                         className="text-white"
                                     >
-                                        {(() => {
-                                            const IconComponent = iconMap[feature.icon as keyof typeof iconMap]
-                                            return <IconComponent className="w-10 h-10" />
-                                        })()}
+                                        <feature.icon className="w-10 h-10" />
                                     </motion.div>
                                     <div>
                                         <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-200 transition-colors duration-300">
@@ -256,9 +293,9 @@ client.chat.onMessage((message) => {
                                 </div>
 
                                 <div className="grid grid-cols-2 gap-3">
-                                    {feature.details.map((detail, j) => (
+                                    {feature.highlights.map((highlight, j) => (
                                         <motion.div
-                                            key={detail}
+                                            key={highlight}
                                             initial={{ opacity: 0, x: -20 }}
                                             whileInView={{ opacity: 1, x: 0 }}
                                             transition={{
@@ -268,8 +305,8 @@ client.chat.onMessage((message) => {
                                             viewport={{ once: true }}
                                             className="flex items-center gap-2 text-sm text-blue-100"
                                         >
-                                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                                            {detail}
+                                            <CheckCircle className="w-4 h-4 text-green-400" />
+                                            {highlight}
                                         </motion.div>
                                     ))}
                                 </div>
@@ -278,13 +315,67 @@ client.chat.onMessage((message) => {
                     </div>
                 </div>
 
-                {/* 代码示例 */}
+                {/* Quick Start Guide */}
+                <div className="w-full max-w-6xl mb-20">
+                    <motion.h3
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-3xl font-semibold text-white mb-12 text-center"
+                    >
+                        🎯 Start Your Development Journey in 3 Steps
+                    </motion.h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {quickStartSteps.map((step, i) => (
+                            <motion.div
+                                key={step.step}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.6,
+                                    delay: i * 0.2 + 0.2,
+                                    type: 'spring',
+                                    bounce: 0.3
+                                }}
+                                viewport={{ once: true }}
+                                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 text-center group"
+                            >
+                                <motion.div
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6"
+                                >
+                                    {step.step}
+                                </motion.div>
+
+                                <h4 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-200 transition-colors duration-300">
+                                    {step.title}
+                                </h4>
+
+                                <p className="text-blue-200 mb-6 leading-relaxed">{step.description}</p>
+
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-200 font-medium rounded-lg border border-blue-400/30 hover:border-blue-400/50 transition-all duration-300 flex items-center gap-2 mx-auto"
+                                >
+                                    {step.action}
+                                    <ArrowRight className="w-4 h-4" />
+                                </motion.button>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Code Example */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="w-full max-w-4xl"
+                    className="w-full max-w-4xl mb-20"
                 >
                     <h3 className="text-2xl font-semibold text-white mb-8 text-center">Get Started in Minutes</h3>
 
@@ -293,7 +384,7 @@ client.chat.onMessage((message) => {
                             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                            <span className="ml-4 text-gray-400 text-sm font-mono">mp-sdk-example.js</span>
+                            <span className="ml-4 text-gray-400 text-sm font-mono">mpchat-example.js</span>
                         </div>
 
                         <motion.pre
@@ -308,30 +399,63 @@ client.chat.onMessage((message) => {
                     </div>
                 </motion.div>
 
-                {/* CTA按钮 */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    viewport={{ once: true }}
-                    className="flex flex-col sm:flex-row gap-4 mt-16"
-                >
-                    <motion.button
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+                {/* Developer Resources */}
+                <div className="w-full max-w-6xl">
+                    <motion.h3
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-3xl font-semibold text-white mb-12 text-center"
                     >
-                        Start Building
-                    </motion.button>
+                        📚 Complete Developer Ecosystem Support
+                    </motion.h3>
 
-                    <motion.button
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/30 hover:border-white/50 transition-all duration-300"
-                    >
-                        View Documentation
-                    </motion.button>
-                </motion.div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {developerResources.map((resource, i) => (
+                            <motion.div
+                                key={resource.title}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.6,
+                                    delay: i * 0.1 + 0.2,
+                                    type: 'spring',
+                                    bounce: 0.3
+                                }}
+                                viewport={{ once: true }}
+                                whileHover={{
+                                    y: -5,
+                                    transition: { duration: 0.2 }
+                                }}
+                                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 text-center group"
+                            >
+                                <motion.div
+                                    whileHover={{ scale: 1.1, rotate: 5 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="text-white mb-4"
+                                >
+                                    <resource.icon className="w-12 h-12 mx-auto" />
+                                </motion.div>
+
+                                <h4 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-200 transition-colors duration-300">
+                                    {resource.title}
+                                </h4>
+
+                                <p className="text-blue-200 text-sm mb-4 leading-relaxed">{resource.description}</p>
+
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="text-blue-300 hover:text-blue-200 font-medium text-sm transition-colors duration-300 flex items-center gap-1 mx-auto"
+                                >
+                                    {resource.link}
+                                    <ArrowRight className="w-3 h-3" />
+                                </motion.button>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
             </div>
             <style jsx>{`
                 @media (min-width: 768px) {

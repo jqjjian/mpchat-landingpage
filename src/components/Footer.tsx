@@ -27,19 +27,29 @@ export default function Footer() {
                             <div className="font-semibold mb-3">Product</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#">Chat</a>
+                                    <a href="#chat" className="hover:text-white transition-colors">
+                                        Chat
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Wallet</a>
+                                    <a href="#wallet" className="hover:text-white transition-colors">
+                                        Wallet
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">MP Card</a>
+                                    <a href="#card" className="hover:text-white transition-colors">
+                                        MP Card
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Download App</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Download App
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Security Center</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Security Center
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -47,13 +57,34 @@ export default function Footer() {
                             <div className="font-semibold mb-3">Developers</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#">Developer Platform</a>
+                                    <a href="#dev" className="hover:text-white transition-colors">
+                                        Developer Platform
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">API Docs</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        API Documentation
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">MiniApp Dev</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        SDK Downloads
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        MiniApp Framework
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Developer Community
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Code Examples
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -61,16 +92,24 @@ export default function Footer() {
                             <div className="font-semibold mb-3">Company</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#">About Us</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        About Us
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Join Us</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Join Us
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Blog</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Blog
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Contact</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Contact
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -78,13 +117,24 @@ export default function Footer() {
                             <div className="font-semibold mb-3">Resources & Support</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#">Help Center</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Help Center
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">FAQ</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        FAQ
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Guides</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Guides
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Developer Support
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -92,16 +142,24 @@ export default function Footer() {
                             <div className="font-semibold mb-3">Legal</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#">Terms of Service</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Terms of Service
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Privacy Policy</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Privacy Policy
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Cookie Policy</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        Cookie Policy
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">AML/KYC Policy</a>
+                                    <a href="#" className="hover:text-white transition-colors">
+                                        AML/KYC Policy
+                                    </a>
                                 </li>
                             </ul>
                         </div>
