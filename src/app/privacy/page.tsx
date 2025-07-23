@@ -19,10 +19,7 @@ export default function PrivacyPolicy() {
             <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-24 pb-16">
                 <div className="container mx-auto px-6 max-w-4xl">
                     <div className="text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            MPChat Privacy Policy - 2.0英文待审核
-                        </h1>
-                        <p className="text-xl text-blue-200 mb-8">6月6日修改</p>
+                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">MPChat Privacy Policy</h1>
                         <div className="text-sm text-blue-300">
                             Effective Date: [Date of first version launch]
                             <br />
