@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
 import Image from 'next/image'
 
 const navs = [
@@ -21,6 +22,8 @@ const QR_CODE_URL = '/qrcode.png' //'https://api.qrserver.com/v1/create-qr-code/
 // }
 
 export default function Navbar() {
+    const router = useRouter()
+    const pathname = usePathname()
     const [active, setActive] = useState('')
     const [showQR, setShowQR] = useState(false)
     // const [lang, setLang] = useState('en')
@@ -30,6 +33,17 @@ export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const navRefs = useRef<(HTMLElement | null)[]>([])
+
+    // 处理logo点击事件
+    const handleLogoClick = () => {
+        if (pathname === '/') {
+            // 如果在首页，滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        } else {
+            // 如果不在首页，跳转到首页
+            router.push('/')
+        }
+    }
 
     // 滚动监听，自动高亮当前模块
     useEffect(() => {
@@ -111,18 +125,38 @@ export default function Navbar() {
     const handleClick = (id: string) => {
         setActive(id)
         setIsMobileMenuOpen(false) // 关闭移动菜单
-        const el = document.getElementById(id)
-        if (el) {
-            // 计算滚动位置，确保板块完整显示
-            const rect = el.getBoundingClientRect()
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-            // 使用导航栏高度64px作为偏移量，确保板块顶部完全可见
-            const targetPosition = rect.top + scrollTop - 64
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            })
+        // 如果不在首页，先跳转到首页
+        if (pathname !== '/') {
+            router.push('/')
+            // 等待页面加载后再滚动到对应section
+            setTimeout(() => {
+                const el = document.getElementById(id)
+                if (el) {
+                    const rect = el.getBoundingClientRect()
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+                    const targetPosition = rect.top + scrollTop - 64
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    })
+                }
+            }, 100)
+        } else {
+            // 如果在首页，直接滚动到对应section
+            const el = document.getElementById(id)
+            if (el) {
+                // 计算滚动位置，确保板块完整显示
+                const rect = el.getBoundingClientRect()
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+                // 使用导航栏高度64px作为偏移量，确保板块顶部完全可见
+                const targetPosition = rect.top + scrollTop - 64
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                })
+            }
         }
     }
 
@@ -164,15 +198,7 @@ export default function Navbar() {
                         minWidth: 0
                     }}
                 >
-                    <div
-                        className="flex items-center space-x-3 cursor-pointer"
-                        onClick={() => {
-                            const el = document.getElementById('__next')
-                            if (el) {
-                                window.scrollTo({ top: 0, behavior: 'smooth' })
-                            }
-                        }}
-                    >
+                    <div className="flex items-center space-x-3 cursor-pointer" onClick={handleLogoClick}>
                         {/* Logo */}
                         <div className="w-10 h-10 relative">
                             <Image src="/logo.svg" alt="MP logo" layout="fill" />
