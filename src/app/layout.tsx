@@ -34,7 +34,7 @@ const redotpay = localFont({
 })
 
 export const metadata: Metadata = {
-    title: 'MP Chat App',
+    title: 'MPChat - Live with Crypto',
     description: 'The Next Generation of Conversation'
 }
 

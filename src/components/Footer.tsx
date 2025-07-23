@@ -142,16 +142,16 @@ export default function Footer() {
                             <div className="font-semibold mb-3 text-white">Legal</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors block">
+                                    <a href="/terms" className="hover:text-white transition-colors block">
                                         Terms of Service
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors block">
+                                    <a href="/privacy" className="hover:text-white transition-colors block">
                                         Privacy Policy
                                     </a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="#" className="hover:text-white transition-colors block">
                                         Cookie Policy
                                     </a>
@@ -160,7 +160,7 @@ export default function Footer() {
                                     <a href="#" className="hover:text-white transition-colors block">
                                         AML/KYC Policy
                                     </a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>
@@ -177,19 +177,17 @@ export default function Footer() {
                     </div>
 
                     {/* Social Media & Language */}
-                    <div className="flex flex-row flex-wrap gap-4 sm:gap-6 items-center justify-center sm:justify-end text-neutral-400 text-sm">
-                        {/* Language Switcher */}
+                    {/* <div className="flex flex-row flex-wrap gap-4 sm:gap-6 items-center justify-center sm:justify-end text-neutral-400 text-sm">
                         <a href="#" className="hover:text-white transition-colors">
                             🌐 Language
                         </a>
-                        {/* Social Media Icons */}
                         <a href="#" className="hover:text-white transition-colors">
                             Twitter
                         </a>
                         <a href="#" className="hover:text-white transition-colors">
                             Telegram
                         </a>
-                    </div>
+                    </div> */}
                 </div>
                 {/* Copyright */}
                 <div className="text-xs text-neutral-500 text-center mt-6">Copyright © 2025 MP All Rights Reserved</div>
