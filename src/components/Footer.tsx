@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <footer className="bg-neutral-900 text-white pt-12 pb-6 px-4 border-t border-neutral-800">
+        <footer className="bg-neutral-900 text-white pt-16 pb-8 px-6 border-t border-neutral-800">
             <div className="mx-auto" style={{ maxWidth: 1700, width: '100%' }}>
                 {/* Get the App & Main Links */}
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 border-b border-neutral-700 pb-8">
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 lg:gap-10 border-b border-neutral-700 pb-8">
                     {/* Get the App with QR Code */}
-                    <div className="mb-6 md:mb-0 min-w-[200px] flex flex-col items-center md:items-start">
+                    <div className="mb-6 lg:mb-0 min-w-[200px] flex flex-col items-center lg:items-start">
                         <div className="font-bold text-xl mb-4">Get the App</div>
                         <div className="bg-white p-3 rounded-lg">
                             <Image
@@ -19,145 +19,145 @@ export default function Footer() {
                                 height={120}
                             />
                         </div>
-                        <p className="text-xs text-neutral-400 mt-2 text-center md:text-left">Scan to download</p>
+                        <p className="text-xs text-neutral-400 mt-2 text-center lg:text-left">Scan to download</p>
                     </div>
                     {/* Links */}
-                    <div className="flex justify-between w-full">
-                        <div>
-                            <div className="font-semibold mb-3">Product</div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-between w-full gap-6 lg:gap-4">
+                        <div className="min-w-0">
+                            <div className="font-semibold mb-3 text-white">Product</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#chat" className="hover:text-white transition-colors">
+                                    <a href="#chat" className="hover:text-white transition-colors block">
                                         Chat
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#wallet" className="hover:text-white transition-colors">
+                                    <a href="#wallet" className="hover:text-white transition-colors block">
                                         Wallet
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#card" className="hover:text-white transition-colors">
+                                    <a href="#card" className="hover:text-white transition-colors block">
                                         MP Card
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Download App
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Security Center
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <div className="font-semibold mb-3">Developers</div>
+                        <div className="min-w-0">
+                            <div className="font-semibold mb-3 text-white">Developers</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#dev" className="hover:text-white transition-colors">
+                                    <a href="#dev" className="hover:text-white transition-colors block">
                                         Developer Platform
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         API Documentation
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         SDK Downloads
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         MiniApp Framework
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Developer Community
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Code Examples
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <div className="font-semibold mb-3">Company</div>
+                        <div className="min-w-0">
+                            <div className="font-semibold mb-3 text-white">Company</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         About Us
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Join Us
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Blog
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Contact
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <div className="font-semibold mb-3">Resources & Support</div>
+                        <div className="min-w-0 md:col-span-2 lg:col-span-1">
+                            <div className="font-semibold mb-3 text-white">Resources & Support</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Help Center
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         FAQ
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Guides
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Developer Support
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <div className="font-semibold mb-3">Legal</div>
+                        <div className="min-w-0 md:col-span-1 lg:col-span-1">
+                            <div className="font-semibold mb-3 text-white">Legal</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Terms of Service
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Privacy Policy
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         Cookie Policy
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:text-white transition-colors">
+                                    <a href="#" className="hover:text-white transition-colors block">
                                         AML/KYC Policy
                                     </a>
                                 </li>
@@ -166,9 +166,9 @@ export default function Footer() {
                     </div>
                 </div>
                 {/* Bottom Row: Logo & Social Media */}
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-6 gap-4 border-b border-neutral-700 pb-4">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-8 gap-4 border-b border-neutral-700 pb-6">
                     {/* Logo */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center justify-center sm:justify-start gap-3">
                         {/* Logo */}
                         <div className="w-8 h-8 relative">
                             <Image src="/logo.svg" alt="MP Logo" layout="fill" />
@@ -177,7 +177,7 @@ export default function Footer() {
                     </div>
 
                     {/* Social Media & Language */}
-                    <div className="flex flex-row flex-wrap gap-6 items-center text-neutral-400 text-sm">
+                    <div className="flex flex-row flex-wrap gap-4 sm:gap-6 items-center justify-center sm:justify-end text-neutral-400 text-sm">
                         {/* Language Switcher */}
                         <a href="#" className="hover:text-white transition-colors">
                             🌐 Language
@@ -192,7 +192,7 @@ export default function Footer() {
                     </div>
                 </div>
                 {/* Copyright */}
-                <div className="text-xs text-neutral-500 text-center mt-4">Copyright © 2025 MP All Rights Reserved</div>
+                <div className="text-xs text-neutral-500 text-center mt-6">Copyright © 2025 MP All Rights Reserved</div>
             </div>
             <style jsx>{`
                 @media (min-width: 768px) {
