@@ -1,39 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MPChat Landing Page
 
-## Getting Started
+这是 MPChat 的官方落地页，使用 [Next.js](https://nextjs.org) 构建，部署在 Cloudflare Pages 上。
 
-First, run the development server:
+## 功能特性
+
+-   🎨 现代化响应式设计
+-   📱 移动端优化
+-   🚀 静态站点生成 (SSG)
+-   🌐 多语言支持准备
+-   📄 隐私政策和服务条款页面
+-   ⚡ 快速加载和优化
+
+## 开发环境
+
+首先安装依赖：
+
+```bash
+npm install
+```
+
+然后启动开发服务器：
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+在浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看结果。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+你可以通过修改 `src/app/page.tsx` 来编辑主页，文件会自动热重载。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 部署到 Cloudflare Pages
 
-## Learn More
+### 自动部署（推荐）
 
-To learn more about Next.js, take a look at the following resources:
+使用提供的部署脚本：
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+./deploy.sh
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 手动部署
 
-## Deploy on Vercel
+1. **登录 Cloudflare**：
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npx wrangler login
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **构建项目**：
 
+    ```bash
+    npm run build:cloudflare
+    ```
 
-d9b1b9a2-832c-4c97-bb1f-51f2b4529f43
+3. **部署到 Cloudflare Pages**：
+    ```bash
+    npx wrangler pages deploy out --project-name mpchat-landingpage
+    ```
+
+### 可用的脚本
+
+-   `npm run dev` - 启动开发服务器
+-   `npm run build` - 构建生产版本
+-   `npm run build:cloudflare` - 为 Cloudflare Pages 构建
+-   `npm run deploy` - 部署到 Cloudflare Pages
+-   `npm run deploy:production` - 部署到生产环境
+
+## 项目结构
+
+```
+src/
+├── app/                 # Next.js App Router
+│   ├── page.tsx        # 主页
+│   ├── privacy/        # 隐私政策页面
+│   └── terms/          # 服务条款页面
+├── components/         # React 组件
+│   ├── Navbar.tsx     # 导航栏
+│   └── Footer.tsx     # 页脚
+└── ...
+```
+
+## 配置文件
+
+-   `next.config.ts` - Next.js 配置
+-   `wrangler.toml` - Cloudflare Pages 配置
+-   `tailwind.config.js` - Tailwind CSS 配置
+
+## 在线访问
+
+-   **当前部署**: https://a926a4b7.mpchat-landingpage.pages.dev
+
+## 技术栈
+
+-   **框架**: Next.js 15 with App Router
+-   **样式**: Tailwind CSS 4
+-   **动画**: Framer Motion
+-   **部署**: Cloudflare Pages
+-   **语言**: TypeScript

@@ -23,11 +23,11 @@ export default function TermsOfService() {
                         <p className="text-xl text-blue-200 mb-8">
                             Please read these terms carefully before using MPChat services
                         </p>
-                        <div className="text-sm text-blue-300">
+                        {/* <div className="text-sm text-blue-300">
                             Effective Date: [Date of first version launch]
                             <br />
                             Last Updated: [Date of most recent version update]
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -887,8 +887,11 @@ export default function TermsOfService() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">14. Contact Us</h2>
                             <p className="text-gray-700 leading-relaxed">
                                 If you have any questions about this Agreement, please contact us at: Email:{' '}
-                                <a href="mailto:support@mp.net" className="text-blue-600 hover:text-blue-800 underline">
-                                    support@mp.net
+                                <a
+                                    href="mailto:support@mpchat.io"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                >
+                                    support@mpchat.io
                                 </a>
                             </p>
                         </div>

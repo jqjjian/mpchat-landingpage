@@ -20,11 +20,11 @@ export default function PrivacyPolicy() {
                 <div className="container mx-auto px-6 max-w-4xl">
                     <div className="text-center">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">MPChat Privacy Policy</h1>
-                        <div className="text-sm text-blue-300">
+                        {/* <div className="text-sm text-blue-300">
                             Effective Date: [Date of first version launch]
                             <br />
                             Last Updated: [Date of most recent version update]
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -822,8 +822,11 @@ export default function PrivacyPolicy() {
                             <p className="text-gray-700 leading-relaxed mb-4">
                                 If you have any questions about this Policy, please contact us through the following
                                 methods: Email:{' '}
-                                <a href="mailto:support@mp.net" className="text-blue-600 hover:text-blue-800 underline">
-                                    support@mp.net
+                                <a
+                                    href="mailto:support@mpchat.io"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                >
+                                    support@mpchat.io
                                 </a>
                             </p>
                         </div>

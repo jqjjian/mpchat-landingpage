@@ -1,7 +1,14 @@
-name = "MPChat"
+name = "mpchat-landingpage"
 compatibility_date = "2024-07-29"
-compatibility_flags = ["nodejs_compat"]‌:ml-citation{ref="3" data="citationList"}
-pages_build_output_dir = ".vercel/output/static"
+compatibility_flags = ["nodejs_compat"]
 
+# Cloudflare Pages 配置
+pages_build_output_dir = "out"
+
+# 生产环境变量
 [env.production.vars]
-NEXT_PUBLIC_SITE_URL = "https://mpchat.io" # 替换为实际域名
+NEXT_PUBLIC_SITE_URL = "https://mpchat.io"
+
+# 预览环境变量
+[env.preview.vars]
+NEXT_PUBLIC_SITE_URL = "https://preview.mpchat.io"
