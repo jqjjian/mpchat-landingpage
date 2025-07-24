@@ -23,7 +23,7 @@ export default function Footer() {
                     </div>
                     {/* Links */}
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-between w-full gap-6 lg:gap-4">
-                        <div className="min-w-0">
+                        {/* <div className="min-w-0">
                             <div className="font-semibold mb-3 text-white">Product</div>
                             <ul className="space-y-2 text-sm text-neutral-300">
                                 <li>
@@ -137,7 +137,7 @@ export default function Footer() {
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div className="min-w-0 md:col-span-1 lg:col-span-1">
                             <div className="font-semibold mb-3 text-white">Legal</div>
                             <ul className="space-y-2 text-sm text-neutral-300">

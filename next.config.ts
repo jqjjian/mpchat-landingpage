@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+    output: 'standalone', // 关键配置‌:ml-citation{ref="2" data="citationList"}
+    images: { unoptimized: true }
+}
 
-export default nextConfig;
+export default nextConfig
