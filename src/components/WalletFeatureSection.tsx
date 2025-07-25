@@ -107,11 +107,11 @@ export default function WalletFeatureSection() {
                                         alt="MP Wallet Interface"
                                         width={484}
                                         height={216}
-                                        className="h-auto rounded-2xl transition-all duration-300 group-hover:shadow-3xl"
+                                        className="h-auto rounded-2xl transition-all duration-300 "
                                         priority
                                     />
                                     {/* 光晕效果 */}
-                                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-gray-200/50 to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                                    {/* <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-gray-200/50 to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div> */}
                                 </motion.div>
                             </div>
                         </motion.div>

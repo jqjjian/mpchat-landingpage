@@ -112,7 +112,7 @@ export default function HeroSection() {
                         >
                             <div className="rounded-3xl flex items-center justify-center">
                                 <Image
-                                    src="/1.webp"
+                                    src="/newbg.webp"
                                     alt="MP"
                                     className="max-w-full h-auto"
                                     width={400}

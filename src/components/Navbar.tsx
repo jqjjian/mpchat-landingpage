@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const navs = [
     { id: 'chat', label: 'Chat' },
-    // { id: 'wallet', label: 'Wallet' },
+    { id: 'wallet', label: 'Wallet' },
     { id: 'card', label: 'MP Card' },
     // { id: "crypto", label: "Transfer" },
     { id: 'dev', label: 'Developers' }
