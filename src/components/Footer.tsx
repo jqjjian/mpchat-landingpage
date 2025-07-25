@@ -8,7 +8,7 @@ export default function Footer() {
                 {/* Get the App & Main Links */}
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 lg:gap-10 border-b border-neutral-700 pb-8">
                     {/* Get the App with QR Code */}
-                    <div className="mb-6 lg:mb-0 min-w-[200px] flex flex-col items-center lg:items-start">
+                    {/* <div className="mb-6 lg:mb-0 min-w-[200px] flex flex-col items-center lg:items-start">
                         <div className="font-bold text-xl mb-4">Get the App</div>
                         <div className="bg-white p-3 rounded-lg">
                             <Image
@@ -20,7 +20,7 @@ export default function Footer() {
                             />
                         </div>
                         <p className="text-xs text-neutral-400 mt-2 text-center lg:text-left">Scan to download</p>
-                    </div>
+                    </div> */}
                     {/* Links */}
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-between w-full gap-6 lg:gap-4">
                         {/* <div className="min-w-0">

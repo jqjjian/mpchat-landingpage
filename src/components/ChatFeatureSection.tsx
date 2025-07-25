@@ -24,8 +24,8 @@ export default function ChatFeatureSection() {
                     </h2>
                     <p className="text-2xl text-gray-700 mb-6 font-medium">Secure. Private. Instant.</p>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Experience the future of messaging with end-to-end encryption, seamless crypto integration, and
-                        instant transfers - all in one powerful platform.
+                        The future of communication starts here. We offer end-to-end encryption, multi-currency
+                        integration, and instant transfers — all on one powerful platform.
                     </p>
                 </motion.div>
 
@@ -92,9 +92,12 @@ export default function ChatFeatureSection() {
                                 <Coins className="text-white w-8 h-8" />
                             </div>
                             <div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display">Crypto Native</h3>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display">
+                                    Multi-currency support
+                                </h3>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    Built for the crypto community with seamless integration and instant transfers.
+                                    Designed for global traders and expatriates. Seamlessly integrate multiple
+                                    currencies for instant transfers.
                                 </p>
                             </div>
                         </div>
@@ -109,8 +112,8 @@ export default function ChatFeatureSection() {
                                     Instant Transfers
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    Send crypto instantly within conversations. No fees, no delays, just seamless
-                                    transfers.
+                                    No fees, no delays. Instantly and seamlessly transfer multiple currencies right
+                                    within your chats.
                                 </p>
                             </div>
                         </div>

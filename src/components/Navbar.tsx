@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const navs = [
     { id: 'chat', label: 'Chat' },
-    { id: 'wallet', label: 'Wallet' },
+    // { id: 'wallet', label: 'Wallet' },
     { id: 'card', label: 'MP Card' },
     // { id: "crypto", label: "Transfer" },
     { id: 'dev', label: 'Developers' }
@@ -306,14 +306,15 @@ export default function Navbar() {
                                     onMouseEnter={() => setShowQR(true)}
                                     onMouseLeave={() => setShowQR(false)}
                                 >
-                                    <Image
+                                    {/* <Image
                                         src={QR_CODE_URL}
                                         alt="Download App QR"
                                         className="w-32 h-32 mb-2"
                                         width={128}
                                         height={128}
                                     />
-                                    <div className="text-xs text-gray-500">Scan to download</div>
+                                    <div className="text-xs text-gray-500">Scan to download</div> */}
+                                    <div className="text-xs text-gray-500">Coming soon...</div>
                                 </div>
                             )}
                         </div>
@@ -404,14 +405,15 @@ export default function Navbar() {
                         </div>
                         {showQR && (
                             <div className="mt-4 flex flex-col items-center p-4 bg-white rounded-xl">
-                                <Image
+                                {/* <Image
                                     src={QR_CODE_URL}
                                     alt="Download App QR"
                                     className="w-32 h-32 mb-2"
                                     width={128}
                                     height={128}
                                 />
-                                <div className="text-xs text-gray-500">Scan to download</div>
+                                <div className="text-xs text-gray-500">Scan to download</div> */}
+                                <div className="text-xs text-gray-500">Coming soon...</div>
                             </div>
                         )}
                     </div>

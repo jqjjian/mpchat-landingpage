@@ -67,12 +67,12 @@ export default function HeroSection() {
                             transition={{ duration: 1, delay: 0.2, type: 'spring' }}
                             className="hero-description text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-normal mb-4 sm:mb-6 md:mb-6 lg:mb-8 xl:mb-10 text-white/90 leading-relaxed pt-2 sm:pt-4 md:pt-6 lg:pt-12 xl:pt-20"
                         >
-                            MP seamlessly blends secure encrypted chat, an easy-to-use crypto wallet, and a globally
-                            accepted payment card. Effortlessly send, manage, and spend your crypto assets – start truly
-                            living with crypto.
+                            MP integrates secure chat, a multi-currency wallet, and a global payment card. Manage your
+                            global assets in one place, and make your life and travels simpler.
                         </motion.p>
+
                         {/* Get the app 按钮区块 */}
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5, type: 'spring' }}
@@ -94,7 +94,7 @@ export default function HeroSection() {
                                     />
                                 </a>
                             </div>
-                        </motion.div>
+                        </motion.div> */}
                     </Parallax>
                 </div>
                 {/* 右侧图片视差动效 - 890px以下隐藏 */}

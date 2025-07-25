@@ -52,8 +52,8 @@ export default function WalletFeatureSection() {
                     </h2>
                     <p className="text-2xl text-gray-700 mb-6 font-medium">Trust. Security. Compliance.</p>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Experience institutional-grade security with regulatory compliance, designed for the modern
-                        crypto investor.
+                        Designed for global expatriates, it offers institutional-grade security with regulatory
+                        compliance.
                     </p>
                 </motion.div>
                 <div className="w-full flex flex-col gap-16">

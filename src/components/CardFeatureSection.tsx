@@ -162,10 +162,10 @@ export default function CardFeatureSection() {
                     <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 font-display tracking-tight drop-shadow-lg">
                         MP Card
                     </h2>
-                    <p className="text-2xl text-blue-100 mb-6 font-medium">Spend Crypto. Anywhere.</p>
+                    <p className="text-2xl text-blue-100 mb-6 font-medium">Spend multi-currency assets anywhere. </p>
                     <p className="text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
-                        Transform your cryptocurrency into everyday purchasing power with our globally accepted payment
-                        card.
+                        Use a globally accepted payment card to turn your multi-currency assets into everyday purchasing
+                        power.
                     </p>
                 </motion.div>
 
@@ -203,7 +203,7 @@ export default function CardFeatureSection() {
                             </div>
                             <h4 className="text-xl font-bold text-white mb-3 font-display">Instant Conversion</h4>
                             <p className="text-blue-100 text-base leading-relaxed">
-                                Seamless crypto-to-fiat conversion for everyday purchases
+                                Multiple fiat currencies, converted in real-time during daily shopping.
                             </p>
                         </div>
 
