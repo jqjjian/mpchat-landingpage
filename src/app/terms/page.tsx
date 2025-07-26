@@ -42,8 +42,8 @@ export default function TermsOfService() {
                             <p className="text-gray-700 leading-relaxed mb-4">
                                 This MPChat User Agreement (hereinafter referred to as{' '}
                                 <strong>&quot;this Agreement&quot;</strong>) is a legally binding agreement entered into
-                                between you (hereinafter also referred to as <strong>&quot;User&quot;</strong>) and{' '}
-                                <strong>MPChat Operator</strong> (hereinafter referred to as{' '}
+                                between you (hereinafter also referred to as <strong>&quot;User&quot;</strong>) and the{' '}
+                                <strong>MPChat Operating Entity</strong> (hereinafter referred to as{' '}
                                 <strong>&quot;we&quot;</strong>, <strong>&quot;us&quot;</strong>, or{' '}
                                 <strong>&quot;MPChat&quot;</strong>) concerning your download, installation,
                                 registration, login, and use of the MPChat software and related services (hereinafter
@@ -52,12 +52,12 @@ export default function TermsOfService() {
                             <p className="text-gray-700 leading-relaxed mb-4">
                                 Please read carefully and fully understand all the terms and conditions of this
                                 Agreement before you start using the Service, especially clauses excluding or limiting
-                                our liability, restricting your rights, or addressing applicable law and dispute
-                                resolution (which may be highlighted in <strong>bold</strong>, underlined, or by other
-                                means for your attention). By clicking <strong>&quot;Agree&quot;</strong> via the
-                                Service, or by otherwise expressing or implying your acceptance of this Agreement, you
-                                confirm that you have read, understand, and agree to be bound by this Agreement, and
-                                this Agreement shall become legally effective between you and us.
+                                our liability, and those addressing applicable law and dispute resolution (which may be
+                                highlighted in <strong>bold</strong>, underlined, or by other means for your attention).
+                                By clicking <strong>&quot;Agree&quot;</strong> via a webpage, by your actual use of the
+                                Service, or by any other means of expressing or implying your acceptance of this
+                                Agreement, you confirm that you have read, understood, and agree to be bound by this
+                                Agreement, which shall thereupon become legally effective between you and us.
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-4">
                                 If you are a minor (as defined by the laws of your jurisdiction), please read this
@@ -76,58 +76,51 @@ export default function TermsOfService() {
                             <div className="mb-6">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-3">1.1 Scope of Application:</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    This Agreement applies to all individuals or entities using any of the MPChat
-                                    Services.
+                                    This Agreement applies to all individuals or entities using any of MPChat&apos;s
+                                    services.
                                 </p>
                             </div>
 
                             <div className="mb-6">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-3">1.2 Service Content:</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    The Service includes, but is not limited to, providing encrypted instant messaging
-                                    (&quot;MPChat Chat&quot;), a custodial digital currency wallet (&quot;MPChat
-                                    Wallet&quot;), a digital currency payment card (&quot;MPChat Card&quot;), and other
-                                    features or services that may be launched in the future. The specific service
-                                    content is subject to what MPChat actually provides.
+                                    The Service primarily provides end-to-end encrypted instant messaging (&quot;MPChat
+                                    Chat&quot;). To enhance the social interactive experience, the Service also includes
+                                    certain convenient payment features that allow users to conduct transfers and send
+                                    Red Packets in U.S. Dollars (USD) within chats, and to optionally apply for an
+                                    associated payment card (&quot;MPChat Card&quot;) for daily consumption. We may also
+                                    launch other features or services in the future. The specific service content is
+                                    subject to what MPChat actually provides.
                                 </p>
                             </div>
 
                             <div className="mb-6">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-3">1.3 Related Definitions:</h3>
+                                <h3 className="text-xl font-semibold text-gray-800 mb-3">1.3 Relevant Definitions:</h3>
                                 <ul className="list-disc list-inside text-gray-700 space-y-3 ml-4">
                                     <li>
-                                        <strong>User Content:</strong> means any and all data, information,
-                                        communications, images, audio, or other materials that a User uploads,
-                                        publishes, transmits, or otherwise shares through or in connection with the
-                                        Service.
+                                        <strong>User Content:</strong> Refers to any data, information, communications,
+                                        images, audio, or other materials that a User uploads, publishes, transmits, or
+                                        otherwise shares in the course of using the Service.
                                     </li>
                                     <li>
-                                        <strong>Digital Assets:</strong> means any blockchain-based digital
-                                        representation of value, including but not limited to cryptocurrencies,
-                                        stablecoins, or tokens that are supported by the MPChat Wallet from time to
-                                        time.
+                                        <strong>MPChat Account:</strong> Refers to the electronic stored-value function
+                                        provided by MPChat to the User for holding, managing, and using U.S. Dollar
+                                        (USD) funds, which can be used for transfers, Red Packets, and MPChat Card
+                                        payments within the Service. It is also sometimes referred to as
+                                        &quot;Balance&quot;.
                                     </li>
                                     <li>
-                                        <strong>Custodial Wallet:</strong> means a digital asset wallet service where
-                                        the private keys required to control and transact with the digital assets stored
-                                        therein are securely held and operated by MPChat or its designated service on
-                                        your behalf. You access and operate the wallet using your account credentials,
-                                        but you do not have direct possession or control of the private keys.
+                                        <strong>KYC/AML:</strong> Stands for &quot;Know Your Customer&quot; and
+                                        &quot;Anti-Money Laundering.&quot; To comply with applicable laws and
+                                        regulations, we are required to conduct identity verification and screening
+                                        procedures on users to prevent financial crimes.
                                     </li>
                                     <li>
-                                        <strong>KYC/AML:</strong> means the combination of &quot;Know Your
-                                        Customer&quot; and &quot;Anti-Money Laundering&quot; processes. It refers to the
-                                        mandatory identity verification and screening procedures we conduct on Users in
-                                        order to comply with applicable laws and regulations and to prevent financial
-                                        crimes.
-                                    </li>
-                                    <li>
-                                        <strong>Affiliates:</strong> means, with respect to a party, any entity that
-                                        directly or indirectly controls, is controlled by, or is under common control
-                                        with that party. For purposes of this definition, &quot;control&quot; means the
-                                        direct or indirect power to direct or cause the direction of the management and
-                                        policies of an entity, whether through the ownership of voting securities, by
-                                        contract, or otherwise.
+                                        <strong>Affiliates:</strong> Refers to any entity that directly or indirectly
+                                        controls, is controlled by, or is under common control with a party. For the
+                                        purposes of this definition, &quot;control&quot; means the power to direct or
+                                        cause the direction of the management and policies of an entity, whether through
+                                        the ownership of voting securities, by contract, or otherwise.
                                     </li>
                                 </ul>
                             </div>
@@ -140,13 +133,10 @@ export default function TermsOfService() {
                             <div className="mb-6">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-3">2.1 Account Eligibility:</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    You represent and warrant that you are a natural person of legal age to form a
-                                    binding contract in your jurisdiction and possess full legal capacity to enter into
-                                    and perform this Agreement, or if you are a legal person or other organization, you
-                                    are duly organized and validly existing under the laws of your jurisdiction and have
-                                    full power and authority to enter into this Agreement. If you do not meet the
-                                    foregoing qualifications, you and your legal guardian (if applicable) shall bear all
-                                    legal and financial consequences arising therefrom.
+                                    You represent and warrant that you are a natural person, legal person, or other
+                                    organization with full capacity for civil rights and civil conduct. If you do not
+                                    meet the foregoing qualifications, you and your guardian shall bear all consequences
+                                    arising therefrom.
                                 </p>
                             </div>
 
@@ -155,8 +145,7 @@ export default function TermsOfService() {
                                 <p className="text-gray-700 leading-relaxed">
                                     You agree to provide true, accurate, complete, and current registration information
                                     (including but not limited to your mobile phone number, email address, etc.) and to
-                                    promptly update such information as necessary to ensure it remains true, accurate,
-                                    complete, and current.
+                                    update it in a timely manner.
                                 </p>
                             </div>
 
@@ -164,11 +153,10 @@ export default function TermsOfService() {
                                 <h3 className="text-xl font-semibold text-gray-800 mb-3">2.3 Account Security:</h3>
                                 <p className="text-gray-700 leading-relaxed">
                                     You are responsible for maintaining the security and confidentiality of your account
-                                    username, password, PIN codes, API keys, and any other codes or credentials used to
-                                    access the Service. You are fully responsible and liable for all activities that
-                                    occur under your account, whether or not authorized by you. If you discover or
-                                    suspect any unauthorized access to or use of your account, or any other breach of
-                                    security, you must notify us immediately.
+                                    username, password, PIN, API keys, and any other codes or credentials used to access
+                                    the Service. You shall be fully responsible for all activities that occur under your
+                                    account. You must notify us immediately if you discover any unauthorized use of your
+                                    account.
                                 </p>
                             </div>
 
@@ -177,10 +165,8 @@ export default function TermsOfService() {
                                     2.4 Account Use Restrictions:
                                 </h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    Your account is for your personal use only (or for the use of the entity you
-                                    represent) and may not be gifted, loaned, leased, <strong>sublicensed</strong>,
-                                    transferred, sold, or otherwise permitted to be used by any other person or entity
-                                    without our prior written consent.
+                                    Your account is for your personal use only and may not be gifted, loaned, leased,
+                                    transferred, or sold.
                                 </p>
                             </div>
 
@@ -189,15 +175,13 @@ export default function TermsOfService() {
                                     2.5 Identity Verification (KYC/AML):
                                 </h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    To use all or part of the Service, particularly MPChat Wallet and MPChat Card, you
-                                    agree to complete identity verification (Know Your Customer - KYC) and anti-money
-                                    laundering (AML) screening procedures as required by us and applicable laws and
-                                    regulations. You agree to provide true, accurate, complete, and current personal
-                                    information and documentation as requested by us for these purposes. We reserve the
-                                    right, at our sole discretion and based on our risk assessment and compliance
-                                    requirements, to refuse to open an account for you, or to suspend or terminate your
-                                    access to some or all of the Service if you fail to comply with these verification
-                                    requirements or if we are unable to verify your identity to our satisfaction.
+                                    To use all or part of the Service (especially to activate and use the MPChat Account
+                                    and MPChat Card features), you agree to complete the identity verification (KYC) and
+                                    anti-money laundering (AML) review procedures as required by us and applicable laws
+                                    and regulations. You agree to provide the true, accurate personal information and
+                                    documents we request for this purpose. We reserve the right to refuse to open, or to
+                                    suspend/terminate, part or all of the services for you based on our risk assessment
+                                    and compliance requirements.
                                 </p>
                             </div>
                         </div>
@@ -224,7 +208,7 @@ export default function TermsOfService() {
                                     <h4 className="text-lg font-medium text-gray-700 mb-2">3.1.2</h4>
                                     <p className="text-gray-700 leading-relaxed">
                                         You can use MPChat Chat to send text, images, voice messages, videos, files, and
-                                        Digital Asset gifts (a feature allowing users to send digital asset gifts), etc.
+                                        USD Red Packets, etc.
                                     </p>
                                 </div>
 
@@ -240,64 +224,29 @@ export default function TermsOfService() {
                             </div>
 
                             <div className="mb-6">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-3">3.2 MPChat Wallet Service:</h3>
+                                <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                                    3.2 Convenient Payment Features:
+                                </h3>
 
                                 <div className="mb-4">
-                                    <h4 className="text-lg font-medium text-gray-700 mb-2">3.2.1</h4>
+                                    <h4 className="text-lg font-medium text-gray-700 mb-2">
+                                        3.2.1 MPChat Account and Balance:
+                                    </h4>
                                     <p className="text-gray-700 leading-relaxed">
-                                        MPChat Wallet is a custodial wallet service. We provide services for you to
-                                        store, send, and receive supported digital assets. You understand and agree that
-                                        by using this custodial service, you do not directly hold or control the private
-                                        keys associated with the digital assets stored in your MPChat Wallet; we secure
-                                        and manage these keys on your behalf.
+                                        You can activate and manage a stored-value account (&quot;MPChat Account&quot;)
+                                        within MPChat for holding USD funds. You may top up your account balance through
+                                        compliant methods we support at the time (such as bank cards, etc.).
                                     </p>
                                 </div>
 
                                 <div className="mb-4">
                                     <h4 className="text-lg font-medium text-gray-700 mb-2">
-                                        3.2.2 Supported Digital Assets:
+                                        3.2.2 Transfers and Red Packets:
                                     </h4>
                                     <p className="text-gray-700 leading-relaxed">
-                                        We will, from time to time, publish and update the list of digital assets
-                                        supported by the MPChat Wallet. We are not responsible for any attempt to use
-                                        your MPChat Wallet with unsupported digital assets.
-                                    </p>
-                                </div>
-
-                                <div className="mb-4">
-                                    <h4 className="text-lg font-medium text-gray-700 mb-2">3.2.3 Transactions:</h4>
-                                    <p className="text-gray-700 leading-relaxed">
-                                        You can initiate transactions to send and receive supported digital assets
-                                        through your MPChat Wallet. You are responsible for the accuracy of all
-                                        transaction details you provide, including recipient addresses and amounts. Once
-                                        a digital asset transaction is submitted to and confirmed on the relevant
-                                        blockchain network, it is generally irreversible. MPChat is not responsible for
-                                        losses incurred due to erroneous transaction instructions provided by you.
-                                    </p>
-                                </div>
-
-                                <div className="mb-4 ">
-                                    <h4 className="text-lg font-medium text-gray-700 mb-2">3.2.4 RISK DISCLOSURE:</h4>
-                                    <p className="text-gray-700 leading-relaxed ">
-                                        YOU FULLY UNDERSTAND AND AGREE THAT THE VALUE OF DIGITAL ASSETS CAN BE EXTREMELY
-                                        VOLATILE AND INVOLVES SUBSTANTIAL RISK OF LOSS. RISKS INCLUDE, BUT ARE NOT
-                                        LIMITED TO, MARKET RISK, LIQUIDITY RISK, OPERATIONAL RISK (INCLUDING THE RISK OF
-                                        CYBER-ATTACKS), LEGAL AND REGULATORY RISK, AND THE RISK OF TOTAL LOSS OF VALUE.
-                                        YOU SHOULD CAREFULLY EVALUATE YOUR FINANCIAL SITUATION AND RISK TOLERANCE BEFORE
-                                        ENGAGING IN ANY DIGITAL ASSET ACTIVITY. WE DO NOT PROVIDE ANY INVESTMENT,
-                                        FINANCIAL, LEGAL, OR TAX ADVICE. ANY INFORMATION PROVIDED THROUGH THE SERVICE IS
-                                        FOR INFORMATIONAL PURPOSES ONLY AND SHOULD NOT BE CONSTRUED AS SUCH ADVICE.
-                                    </p>
-                                </div>
-
-                                <div className="mb-4">
-                                    <h4 className="text-lg font-medium text-gray-700 mb-2">3.2.5 Fees:</h4>
-                                    <p className="text-gray-700 leading-relaxed">
-                                        We may charge certain fees for wallet services, such as transaction fees
-                                        (network fees or service fees), withdrawal fees, or other applicable charges.
-                                        The specific fee schedule will be made available to you within the MPChat
-                                        application or on our website and is subject to change at our discretion with
-                                        prior notice where required by applicable law.
+                                        You can directly transfer USD to your friends in chats or send USD Red Packets
+                                        in group chats. The relevant funds will be deducted from or deposited into your
+                                        MPChat Account balance.
                                     </p>
                                 </div>
                             </div>
@@ -308,10 +257,9 @@ export default function TermsOfService() {
                                 <div className="mb-4">
                                     <h4 className="text-lg font-medium text-gray-700 mb-2">3.3.1</h4>
                                     <p className="text-gray-700 leading-relaxed">
-                                        You may be eligible to apply for and use an MPChat Card (which may be a virtual
-                                        card, a physical card, or both), allowing you to use supported digital assets
-                                        from your MPChat Wallet for purchases at merchants worldwide that accept the
-                                        relevant card network (e.g., Visa, Mastercard).
+                                        You may optionally apply for and use an MPChat Card (virtual or physical) to
+                                        spend your MPChat Account&apos;s USD balance at merchants worldwide that accept
+                                        the corresponding card network (e.g., Visa/Mastercard).
                                     </p>
                                 </div>
 
@@ -320,9 +268,8 @@ export default function TermsOfService() {
                                         3.3.2 Application and Activation:
                                     </h4>
                                     <p className="text-gray-700 leading-relaxed">
-                                        To obtain and activate an MPChat Card, you must meet our application criteria,
-                                        which may include successful completion of KYC/AML verification and other
-                                        requirements we may impose.
+                                        You must meet our application criteria and complete the necessary verification
+                                        to obtain and activate an MPChat Card.
                                     </p>
                                 </div>
 
@@ -331,35 +278,32 @@ export default function TermsOfService() {
                                         3.3.3 Spending and Conversion:
                                     </h4>
                                     <p className="text-gray-700 leading-relaxed">
-                                        When you use the MPChat Card for a transaction, we (or our third-party partners)
-                                        will, based on the then-current exchange rates and applicable fees, convert the
-                                        required amount of your supported digital assets into the fiat currency required
-                                        to complete the transaction (e.g., USD, EUR). Exchange rates are subject to
-                                        fluctuation and the conversion process may involve third-party services and
-                                        their terms.
+                                        When you use the MPChat Card for a transaction, the corresponding amount will be
+                                        deducted directly from your MPChat Account&apos;s USD balance. If the
+                                        transaction currency is not USD, a currency conversion will be performed at the
+                                        exchange rate effective at that time by the card network (e.g., Visa/Mastercard)
+                                        to complete the payment.
                                     </p>
                                 </div>
 
                                 <div className="mb-4">
                                     <h4 className="text-lg font-medium text-gray-700 mb-2">3.3.4 Fees and Limits:</h4>
                                     <p className="text-gray-700 leading-relaxed">
-                                        The use of the MPChat Card may be subject to various fees (such as annual fees,
-                                        transaction fees, currency conversion fees, ATM withdrawal fees, etc.) and
-                                        spending limits. Specific details regarding fees and limits will be provided to
-                                        you through the MPChat Cardholder Agreement or other relevant documentation and
-                                        are subject to change.
+                                        The use of the MPChat Card may be subject to fees such as annual fees,
+                                        transaction fees, currency conversion fees, and ATM withdrawal fees, and may
+                                        have spending limits. Specific details will be provided separately or stipulated
+                                        in relevant agreements.
                                     </p>
                                 </div>
 
                                 <div className="mb-4">
                                     <h4 className="text-lg font-medium text-gray-700 mb-2">
-                                        3.3.5 Relationship with Card Issuers and Networks:
+                                        3.3.5 Relationship with Issuing Institutions:
                                     </h4>
                                     <p className="text-gray-700 leading-relaxed">
-                                        The MPChat Card may be issued by, and operate on the network of, one or more
-                                        third-party financial institutions or card networks. Your use of the MPChat Card
-                                        will be subject to this Agreement, as well as any separate terms and conditions
-                                        imposed by such card issuers or networks, which will be made available to you.
+                                        The MPChat Card may be issued by our third-party financial institution partners.
+                                        Your use of the card will be subject to their relevant terms in addition to this
+                                        Agreement.
                                     </p>
                                 </div>
                             </div>
@@ -372,56 +316,40 @@ export default function TermsOfService() {
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">4.1</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    You undertake to comply with all applicable local, state, national, and
-                                    international laws, regulations, rules, and policies in connection with your use of
-                                    the Service.
+                                    You undertake to comply with all applicable laws, regulations, rules, and policies.
                                 </p>
                             </div>
 
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">4.2</h3>
                                 <p className="text-gray-700 leading-relaxed mb-3">
-                                    You shall not use the Service for any illegal, fraudulent, or unauthorized purpose,
-                                    or in any manner that could harm MPChat, its users, or any third party. Prohibited
-                                    activities include, but are not limited to:
+                                    You shall not use the Service for any illegal purpose or in any manner, including
+                                    but not limited to:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
                                     <li>
-                                        Engaging in or facilitating any financial crimes, such as money laundering,
-                                        terrorist financing, fraud, or illegal fundraising;
+                                        Financial criminal activities such as money laundering, terrorist financing,
+                                        fraud, or illegal fundraising;
                                     </li>
                                     <li>
-                                        Infringing upon or violating intellectual property rights, privacy rights,
-                                        publicity rights, or other legitimate rights of others;
+                                        Infringing upon the intellectual property rights, privacy rights, or other
+                                        legitimate rights of others;
+                                    </li>
+                                    <li>Disseminating viruses, Trojan horses, or other malicious software;</li>
+                                    <li>
+                                        Engaging in any activity that could compromise the security of the
+                                        Service&apos;s systems or network;
                                     </li>
                                     <li>
-                                        Uploading, transmitting, or distributing any viruses, Trojan horses, worms, time
-                                        bombs, or other malicious software or harmful computer code;
+                                        Publishing or disseminating content that is unlawful, obscene, defamatory,
+                                        threatening, harassing, hateful, racially or ethnically offensive, or otherwise
+                                        objectionable;
                                     </li>
+                                    <li>Impersonating any person or entity;</li>
+                                    <li>Collecting other users&apos; information without authorization;</li>
                                     <li>
-                                        {`Engaging in any activity that could damage, disable, overburden, or impair the
-                                        Service's systems, network security, or interfere with any other party's use and
-                                        enjoyment of the Service;`}
-                                    </li>
-                                    <li>
-                                        Publishing, posting, or disseminating any content that is unlawful, obscene,
-                                        defamatory, libelous, threatening, harassing, hateful, abusive, racially or
-                                        ethnically offensive, or otherwise objectionable or inappropriate as determined
-                                        by us in our sole discretion;
-                                    </li>
-                                    <li>
-                                        Impersonating any person or entity, or falsely stating or otherwise
-                                        misrepresenting your affiliation with a person or entity;
-                                    </li>
-                                    <li>
-                                        Collecting or attempting to collect personal information about other users
-                                        without their express consent or in violation of applicable data protection
-                                        laws;
-                                    </li>
-                                    <li>
-                                        Engaging in any activity that we, in our sole discretion, deem to be
-                                        inappropriate, unethical, or in violation of the spirit or intent of this
-                                        Agreement or any MPChat policies.
+                                        Engaging in any activity that we, in our sole discretion, deem inappropriate or
+                                        in violation of the spirit of this Agreement.
                                     </li>
                                 </ul>
                             </div>
@@ -429,16 +357,11 @@ export default function TermsOfService() {
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">4.3</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    We reserve the right, but are not obligated, to monitor your use of the Service for
-                                    compliance with this Agreement and applicable law. If we, in our sole discretion,
-                                    believe that your conduct violates this Agreement or any applicable laws or
-                                    regulations, or is otherwise harmful to MPChat, our users, or any third party, we
-                                    reserve the right to take appropriate action, including but not limited to: issuing
-                                    warnings, restricting access to certain features, suspending your access to the
-                                    Service, terminating your account, removing or blocking User Content, and/or
-                                    reporting your activities to relevant law enforcement authorities or regulatory
-                                    bodies, with or without prior notice to you (unless prior notice is required by
-                                    applicable law).
+                                    We reserve the right to monitor your use of the Service. If we believe your conduct
+                                    violates this Agreement or applicable laws, we have the right, at our sole
+                                    discretion, to take measures including but not limited to issuing warnings,
+                                    restricting features, suspending services, terminating your account, deleting
+                                    content, and reporting to relevant authorities, without prior notice to you.
                                 </p>
                             </div>
                         </div>
@@ -450,46 +373,30 @@ export default function TermsOfService() {
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">5.1</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    You are solely and entirely responsible for any and all data, text, images, audio,
-                                    video, information, or other materials that you upload, send, submit, store, or
-                                    share through or in connection with the Service (&quot;<strong>User Content</strong>
-                                    &quot;). You represent and warrant that you own all necessary rights, licenses,
-                                    consents, and permissions to your User Content, or have otherwise obtained all
-                                    necessary legal authorizations, to submit such User Content and to grant the
-                                    licenses set forth in this Agreement. You further represent and warrant that your
-                                    User Content does not and will not violate any applicable laws or regulations, or
-                                    infringe or misappropriate any third party rights.
+                                    You are solely responsible for any content you upload, send, store, or share via the
+                                    Service (&quot;<strong>User Content</strong>&quot;). You warrant that you own all
+                                    necessary rights to your User Content or have obtained legal authorization.
                                 </p>
                             </div>
 
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">5.2</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    You hereby grant MPChat a worldwide, non-exclusive, royalty-free, sublicensable, and
-                                    transferable license to use, host, store, reproduce, modify (e.g., for formatting
-                                    purposes), distribute, create derivative works of, publicly perform, publicly
-                                    display, and transmit your User Content (for example, to display your messages on
-                                    the devices of your designated recipients, or to process your transaction
-                                    instructions) solely for the purposes of operating, providing, maintaining, and
-                                    improving the Service in accordance with this Agreement and our Privacy Policy. This
-                                    license is limited to what is reasonably necessary for us to operate and provide the
-                                    Service as contemplated by this Agreement. This license continues even if you stop
-                                    using our Service with respect to User Content that you have shared with others who
-                                    have not deleted it, or User Content that may be retained by us for backup purposes
-                                    or as required by law.
+                                    You grant us a worldwide, non-exclusive, royalty-free, sublicensable, and
+                                    transferable license to use, copy, distribute, create derivative works of, display,
+                                    and perform your User Content for the sole purpose of operating and providing the
+                                    Service (e.g., to display your messages on your designated recipients&apos;
+                                    devices). This license is limited to what is necessary for operating and providing
+                                    the Service.
                                 </p>
                             </div>
 
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">5.3</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    We are not the publisher of User Content and do not endorse, support, represent, or
-                                    guarantee the completeness, truthfulness, accuracy, or reliability of any User
-                                    Content or communications posted via the Service. We reserve the right, at our sole
-                                    discretion and without prior notice (unless required by law), to remove, block, or
-                                    disable access to any User Content that we believe, in good faith, violates this
-                                    Agreement, any applicable laws or regulations, or is otherwise harmful to MPChat,
-                                    our users, or any third party.
+                                    We are not the publisher of and do not endorse User Content. We reserve the right,
+                                    at our sole discretion and without prior notice, to remove or block any User Content
+                                    that we believe violates this Agreement or applicable laws.
                                 </p>
                             </div>
                         </div>
@@ -501,27 +408,18 @@ export default function TermsOfService() {
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">6.1</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    All rights, title, and interest in and to the Service (including but not limited to
-                                    the MPChat software, technology, text, graphics, user interfaces, visual interfaces,
-                                    photographs, trademarks, logos, sounds, music, artwork, and computer code, and the
-                                    design, structure, selection, coordination, expression, &quot;look and feel,&quot;
-                                    and arrangement of such content), including all associated Intellectual Property
-                                    rights, are and will remain the exclusive property of MPChat and/or its licensors.
-                                    This Agreement does not grant you any rights to use MPChat&apos;s brand features,
-                                    including trademarks, logos, or domain names, except as expressly permitted by us in
-                                    writing.
+                                    All intellectual property rights (including copyrights, trademarks, patents, trade
+                                    secrets, etc.) in and to the Service (including but not limited to the software,
+                                    technology, text, graphics, user interfaces, trademarks, logos, etc.) are and will
+                                    remain the exclusive property of us or our licensors.
                                 </p>
                             </div>
 
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">6.2</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    Without our prior express written consent, you may not copy, modify, adapt,
-                                    translate, create derivative works from, distribute, publicly display, publicly
-                                    perform, sell, lease, rent, sublicense, reverse engineer, decompile, disassemble, or
-                                    otherwise attempt to extract the source code of, or otherwise exploit for any
-                                    commercial or non-commercial purpose, any part of the Service or its underlying
-                                    software or technology.
+                                    Without our prior written consent, you may not copy, modify, distribute, sell,
+                                    lease, reverse engineer, or otherwise exploit any part of the Service.
                                 </p>
                             </div>
                         </div>
@@ -533,15 +431,10 @@ export default function TermsOfService() {
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">7.1</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    The Service may contain links or integrations with third-party websites,
-                                    applications, content, products, or services (&quot;
-                                    <strong>Third-Party Services</strong>&quot;), or allow you to access features or
-                                    content provided by third parties. These Third-Party Services are not owned or
-                                    controlled by MPChat and are subject to their own respective terms of service and
-                                    privacy policies. We are not responsible or liable for the content, accuracy,
-                                    availability, security, or functionality of any Third-Party Services, or for any
-                                    loss or damage that may arise from your use of them. Your interaction with any
-                                    Third-Party Service is solely between you and the applicable third party.
+                                    The Service may contain links to or allow you to access features or content provided
+                                    by third-party websites, applications, or services. These third-party services are
+                                    governed by their own respective terms and privacy policies. We are not responsible
+                                    for the content, accuracy, security, or functionality of any third-party services.
                                 </p>
                             </div>
                         </div>
@@ -553,13 +446,10 @@ export default function TermsOfService() {
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">8.1</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    You agree to pay all applicable fees, if any, incurred in connection with your use
-                                    of the Service (such as transaction fees for wallet or card services, subscription
-                                    fees for premium features, etc.). The applicable fee schedule will be made available
-                                    to you within the MPChat application, on our website, or as otherwise communicated
-                                    to you, and is subject to change at our discretion upon reasonable notice. All fees
-                                    are non-refundable unless otherwise expressly stated in this Agreement or required
-                                    by applicable law.
+                                    You agree to pay all applicable fees incurred in connection with your use of the
+                                    Service (such as account top-up/management fees, card-related fees, currency
+                                    conversion fees, etc.). Fee schedules will be published within the MPChat
+                                    application or on our website. We reserve the right to adjust the fee schedules.
                                 </p>
                             </div>
 
@@ -567,13 +457,8 @@ export default function TermsOfService() {
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">8.2</h3>
                                 <p className="text-gray-700 leading-relaxed">
                                     You are solely responsible for determining, reporting, and remitting all applicable
-                                    taxes (including but not limited to sales, use, value-added, withholding, or similar
-                                    taxes) that may arise from your use of the Service, your digital asset transactions,
-                                    or any income you may generate in connection with the Service. MPChat is not
-                                    responsible for determining whether taxes apply to your transactions or for
-                                    collecting, reporting, or remitting any taxes arising from any transaction. We may,
-                                    however, be required by law to collect certain tax information from you or to
-                                    withhold taxes from payments made to you.
+                                    taxes that may arise from your use of the Service and your financial transactions or
+                                    any taxable income generated from using the Service.
                                 </p>
                             </div>
                         </div>
@@ -586,59 +471,47 @@ export default function TermsOfService() {
 
                             <div className="mb-4">
                                 <h3 className="text-lg font-medium text-gray-700 mb-2">
-                                    9.1 SERVICE PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot;
+                                    9.1 Service Provided &quot;As Is&quot;:
                                 </h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    THE SERVICE IS PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS,
-                                    WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT
-                                    PERMISSIBLE PURSUANT TO APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR
-                                    IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY,
-                                    FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ANY WARRANTIES
-                                    ARISING OUT OF COURSE OF DEALING OR USAGE OF TRADE. WE DO NOT WARRANT THAT THE
-                                    SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, RELIABLE, OR THAT ANY INFORMATION
-                                    OR CONTENT OBTAINED THROUGH THE SERVICE WILL BE ACCURATE, COMPLETE, OR CURRENT, OR
-                                    THAT ANY DEFECTS OR ERRORS WILL BE CORRECTED.
+                                    The Service is provided on an &quot;as is&quot; and &quot;as available&quot; basis.
+                                    We make no warranties of any kind, either express or implied, including, but not
+                                    limited to, warranties of merchantability, fitness for a particular purpose,
+                                    non-infringement, or that the Service will be uninterrupted, error-free, secure,
+                                    reliable, or that information will be accurate or complete.
                                 </p>
                             </div>
 
                             <div className="mb-4">
-                                <h3 className="text-lg font-medium text-gray-700 mb-2">9.2 ACKNOWLEDGEMENT OF RISKS</h3>
+                                <h3 className="text-lg font-medium text-gray-700 mb-2">
+                                    9.2 Payment Feature Risk Warning:
+                                </h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    YOU ACKNOWLEDGE AND AGREE THAT YOUR USE OF THE SERVICE, PARTICULARLY THOSE ASPECTS
-                                    INVOLVING DIGITAL ASSET TRANSACTIONS, STORAGE, AND THE MPCHAT CARD, IS AT YOUR SOLE
-                                    RISK. THE VALUE OF DIGITAL ASSETS IS HIGHLY VOLATILE AND CAN FLUCTUATE
-                                    SIGNIFICANTLY, WHICH MAY RESULT IN A SUBSTANTIAL OR TOTAL LOSS OF VALUE. YOU ARE
-                                    SOLELY RESPONSIBLE FOR ASSESSING THE RISKS ASSOCIATED WITH DIGITAL ASSETS AND YOUR
-                                    USE OF THE SERVICE.
+                                    You understand and agree that when using payment features such as transfers, you are
+                                    responsible for carefully verifying the recipient&apos;s information. You shall bear
+                                    any financial loss resulting from your own operational errors (such as transferring
+                                    to the wrong account or leaking your password). MPChat is not liable for
+                                    user-to-user transfer errors not caused by us.
                                 </p>
                             </div>
 
                             <div className="mb-4">
-                                <h3 className="text-lg font-medium text-gray-700 mb-2">9.3 LIMITATION OF LIABILITY</h3>
+                                <h3 className="text-lg font-medium text-gray-700 mb-2">9.3 Limitation of Liability:</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MPCHAT, ITS
-                                    AFFILIATES, OR THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, SUPPLIERS,
-                                    OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
-                                    EXEMPLARY, OR PUNITIVE DAMAGES (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF
-                                    PROFITS, REVENUE, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES) ARISING OUT OF OR
-                                    RELATING TO THIS AGREEMENT, YOUR ACCESS TO OR USE OF (OR YOUR INABILITY TO ACCESS OR
-                                    USE) THE SERVICE, OR ANY CONTENT OR INFORMATION OBTAINED THROUGH THE SERVICE,
-                                    WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), STATUTE, OR ANY
-                                    OTHER LEGAL THEORY, AND WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF
-                                    SUCH DAMAGE, AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS
-                                    ESSENTIAL PURPOSE.
+                                    To the maximum extent permitted by law, in no event shall we be liable for any
+                                    indirect, incidental, consequential, special, or punitive damages (including loss of
+                                    profits, data, or goodwill) arising out of or in connection with this Agreement or
+                                    the use of the Service, even if we have been advised of the possibility of such
+                                    damages.
                                 </p>
                             </div>
 
                             <div className="mb-4">
-                                <h3 className="text-lg font-medium text-gray-700 mb-2">9.4 FORCE MAJEURE</h3>
+                                <h3 className="text-lg font-medium text-gray-700 mb-2">9.4 Force Majeure:</h3>
                                 <p className="text-gray-700 leading-relaxed">
-                                    We shall not be liable to perform resulting from causes outside our reasonable
-                                    control, including, but not limited to, acts of God, war, terrorism, riots,
-                                    embargoes, acts of civil or military authorities, fire, floods, accidents,
-                                    pandemics, epidemics, strikes, or shortages of transportation facilities, fuel,
-                                    energy, labor, or materials, or failures of public or private telecommunications
-                                    networks, or cyber-attacks.
+                                    We shall not be liable for any service interruption or loss resulting from causes
+                                    outside our reasonable control, such as acts of God, war, terrorism, government
+                                    actions, network failures, or cyber-attacks.
                                 </p>
                             </div>
                         </div>
@@ -648,36 +521,13 @@ export default function TermsOfService() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Indemnification</h2>
 
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                You agree to defend, indemnify, and hold harmless MPChat, its affiliates, and their
-                                respective directors, officers, employees, agents, licensors, and partners from and
-                                against any and all claims, actions, suits, proceedings, demands, liabilities, damages,
-                                losses, judgments, settlements, penalties, fines, costs, and expenses (including,
-                                without limitation, reasonable attorneys&apos; fees and other legal and litigation
-                                expenses) arising out of or relating to:
+                                You agree to indemnify, defend, and hold harmless us, our affiliates, and their
+                                respective directors, officers, employees, and agents from and against any and all
+                                claims, liabilities, damages, losses, and expenses (including reasonable attorneys&apos;
+                                fees) arising out of or in any way connected with your breach of this Agreement, misuse
+                                of the Service, violation of any third-party rights, or violation of any applicable
+                                laws.
                             </p>
-
-                            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                                <li>
-                                    <strong>(a)</strong> your breach or alleged breach of this Agreement or any
-                                    representation, warranty, or covenant made by you herein;
-                                </li>
-                                <li>
-                                    <strong>(b)</strong> your access to, use of, or misuse of the Service;
-                                </li>
-                                <li>
-                                    <strong>(c)</strong> your User Content;
-                                </li>
-                                <li>
-                                    <strong>(d)</strong> your violation of any applicable laws, regulations, or rules;
-                                </li>
-                                <li>
-                                    <strong>(e)</strong> your violation of any rights of any third party. We reserve the
-                                    right, at our own expense, to assume the exclusive defense and control of any matter
-                                    otherwise subject to indemnification by you, in which event you will cooperate with
-                                    us in asserting any available defenses. You may not settle any claim without our
-                                    prior written consent.
-                                </li>
-                            </ul>
                         </div>
 
                         {/* 11. Changes, Suspension, and Termination of Agreement */}
@@ -886,12 +736,15 @@ export default function TermsOfService() {
                         <div className="mb-12">
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">14. Contact Us</h2>
                             <p className="text-gray-700 leading-relaxed">
-                                If you have any questions about this Agreement, please contact us at: Email:{' '}
+                                If you have any questions about this Agreement, please contact us at:
+                            </p>
+                            <p className="text-gray-700 leading-relaxed">
+                                Email:{' '}
                                 <a
-                                    href="mailto:support@mpchat.io"
+                                    href="mailto:support@mpchats.com"
                                     className="text-blue-600 hover:text-blue-800 underline"
                                 >
-                                    support@mpchat.io
+                                    support@mpchats.com
                                 </a>
                             </p>
                         </div>

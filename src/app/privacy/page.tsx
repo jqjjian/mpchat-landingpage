@@ -43,8 +43,8 @@ export default function PrivacyPolicy() {
                                 protect the security and reliability of your personal information. We are committed to
                                 maintaining your trust in us and adhere to the following principles to protect your
                                 personal information: consistency of rights and responsibilities, clarity of purpose,
-                                opt-in consent, data minimization, ensuring security, subject participation,
-                                transparency, etc.
+                                opt-in consent, data minimization, ensuring security, subject participation, and
+                                transparency.
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-4">
                                 This MPChat Privacy Policy (hereinafter referred to as{' '}
@@ -107,12 +107,12 @@ export default function PrivacyPolicy() {
                                 </li>
 
                                 <li className="text-gray-700">
-                                    <strong>Identity Verification Information (KYC):</strong> To use financial services
-                                    such as MPChat Wallet and MPChat Card, as required by applicable laws and
-                                    regulations, we need to collect your identity verification information, which may
+                                    <strong>Identity Verification Information (KYC):</strong> To use convenient payment
+                                    features such as the MPChat Account and MPChat Card, as required by applicable laws
+                                    and regulations, we need to collect your identity verification information. This may
                                     include your name, ID type and number, date of birth, nationality, proof of address,
                                     facial recognition information, and other information we require to fulfill
-                                    Anti-Money Laundering (AML) and Counter-Terrorism Financing (CTF) obligations.
+                                    Anti-Money Laundering (AML) and Counter-Terrorist Financing (CTF) obligations.
                                 </li>
 
                                 <li className="text-gray-700">
@@ -129,16 +129,16 @@ export default function PrivacyPolicy() {
                                             <strong>Message Metadata:</strong> To provide and maintain the chat service,
                                             we may collect metadata related to your messages, such as the sender,
                                             recipient(s), time of sending, message status (e.g., sent, delivered, read),
-                                            and list of members in a group chat.
+                                            and the list of members in a group chat.
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li className="text-gray-700">
-                                    <strong>Digital asset gift Information:</strong> When you use the Digital Asset Red
-                                    Envelope feature, we will collect necessary information related to the red envelope,
-                                    such as sender, recipient(s), red envelope amount (we may only record a range or
-                                    no-identify, if to protect privacy), and red envelope status (e.g., claimed,
+                                    <strong>Red Packet Information:</strong> When you use the USD Red Packet feature, we
+                                    will collect necessary information related to the red packet, such as the sender,
+                                    recipient(s), the USD amount of the red packet (we may only record a range or
+                                    de-identify it to protect privacy), and the red packet status (e.g., claimed,
                                     expired).
                                 </li>
 
@@ -149,27 +149,27 @@ export default function PrivacyPolicy() {
                                 </li>
 
                                 <li className="text-gray-700">
-                                    <strong>Wallet Transaction Information:</strong> When you use the MPChat Wallet
-                                    service, we will collect your transaction information, including your wallet
-                                    address, the counterparty&apos;s wallet address (or MPChat user identifier), the
-                                    type and amount of digital assets transacted, timestamp, transaction status, and
-                                    other necessary information related to the transaction.
+                                    <strong>Account Transaction Information:</strong> When you use your MPChat Account,
+                                    we will collect your transaction information, including the counterparty&apos;s
+                                    MPChat account information (or user identifier), the USD amount of the transaction,
+                                    timestamp, transaction status, and other necessary information related to the
+                                    transaction.
                                 </li>
 
                                 <li className="text-gray-700">
                                     <strong>MPChat Card Information:</strong> When you apply for and use an MPChat Card,
-                                    we will collect your card application information, wallet information associated
-                                    with the card, and card transaction records (including merchant information,
-                                    transaction amount, transaction time, location, etc.; some information may be
-                                    provided by third-party card issuers or payment networks).
+                                    we will collect your card application information, the MPChat Account information
+                                    associated with the card, and card transaction records (including merchant
+                                    information, transaction amount, transaction time, location, etc.; some information
+                                    may be provided by third-party card issuers or payment networks).
                                 </li>
 
                                 <li className="text-gray-700">
-                                    <strong>Contact List Information:</strong> If you choose to use MPChat&apos;s
-                                    contact matching feature, with your explicit consent and authorization, we may
-                                    access your device&apos;s contact list to help you find contacts who are already
-                                    using MPChat. We will only process this information using methods such as
-                                    cryptographic hashing to protect the privacy of your contacts.
+                                    <strong>Contact List Information:</strong> If you choose to use the contact matching
+                                    feature, with your explicit consent and authorization, we may access your
+                                    device&apos;s contact list to help you find contacts who are already using MPChat.
+                                    We will only process this information using methods such as cryptographic hashing to
+                                    protect the privacy of your contacts.
                                 </li>
 
                                 <li className="text-gray-700">
@@ -208,8 +208,8 @@ export default function PrivacyPolicy() {
                                             <strong>Precise Location:</strong> Only with your explicit authorization and
                                             when you enable device location features will we collect your precise
                                             geographical location information in specific scenarios (such as when you
-                                            choose to send your real-time location to other users). You can change your
-                                            device settings at any time.
+                                            choose to send your real-time location to a friend). You can disable this
+                                            permission in your device settings at any time.
                                         </li>
                                     </ul>
                                 </li>
@@ -255,8 +255,8 @@ export default function PrivacyPolicy() {
                             <ul className="list-disc list-inside space-y-4">
                                 <li className="text-gray-700">
                                     <strong>To Provide, Maintain, and Improve Our Services:</strong> Including account
-                                    registration, enabling chat communication, wallet transactions, card payments,
-                                    Digital Asset Red Envelopes, and other core functions, as well as providing
+                                    registration, enabling chat communication, USD transfers, card payments, USD Red
+                                    Packets, and other core and convenient payment features, as well as providing
                                     necessary customer support.
                                 </li>
                                 <li className="text-gray-700">
@@ -361,8 +361,8 @@ export default function PrivacyPolicy() {
                                 </ul>
                                 <div className="ml-6 space-y-2 text-gray-700">
                                     <p>
-                                        <strong>Payment Processors:</strong> To process your wallet top-ups, card
-                                        payments, etc.
+                                        <strong>Payment Processors:</strong> To process your MPChat Account top-ups,
+                                        card payments, and other transactions.
                                     </p>
                                     <p>
                                         <strong>Identity Verification Service Providers:</strong> To complete KYC/AML
@@ -399,9 +399,8 @@ export default function PrivacyPolicy() {
                                 <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
                                     <li>With your explicit consent.</li>
                                     <li>
-                                        In the event of a merger, acquisition, or bankruptcy liquidation, or other
-                                        circumstances involving a merger, acquisition, or bankruptcy liquidation, if
-                                        personal information transfer is involved, we will require the new company or
+                                        In the event of a merger, acquisition, or bankruptcy liquidation, if personal
+                                        information transfer is involved, we will require the new company or
                                         organization holding your personal information to continue to be bound by this
                                         Policy; otherwise, we will require that company, organization, or individual to
                                         seek your authorization again.
@@ -456,14 +455,13 @@ export default function PrivacyPolicy() {
                                     </li>
                                     <li>
                                         <strong>Cross-border Transfer:</strong> To support our global operations, your
-                                        personal information may be processed or transferred to other jurisdictions
+                                        personal information may be processed in or transferred to other jurisdictions
                                         outside the country/region where you initially provided the information. In such
                                         cases, we will strictly comply with applicable data protection laws and
                                         regulations, taking measures including but not limited to necessary contractual
-                                        safeguards (such as Standard Contractual Clauses where applicable), technical
-                                        security, and organizational management measures to ensure that your personal
-                                        information receives adequate protection at any processing or receiving
-                                        location.
+                                        safeguards, technical security, and organizational management measures to ensure
+                                        that your personal information receives adequate protection at any processing or
+                                        receiving location.
                                     </li>
                                     <li>
                                         <strong>Storage Period:</strong> We will only retain your personal information
@@ -556,11 +554,11 @@ export default function PrivacyPolicy() {
                                     </h3>
                                     <p className="text-gray-700 leading-relaxed">
                                         You have the right to access your personal information, except in circumstances
-                                        stipulated by laws and regulations. If you wish to exercise your right of data
-                                        access, you can do so yourself through paths such as &quot;Settings&quot; -
-                                        &quot;Account and Security&quot; - &quot;Personal Information Management&quot;
-                                        within the MPChat application, or by contacting us through the contact
-                                        information provided in this Policy.
+                                        stipulated by laws and regulations. You can exercise your right of data access
+                                        yourself through paths such as &quot;Settings&quot; -&gt; &quot;Account and
+                                        Security&quot; -&gt; &quot;Personal Information Management&quot; within the
+                                        MPChat application, or by contacting us through the contact information provided
+                                        in this Policy.
                                     </p>
                                 </div>
 
@@ -620,11 +618,11 @@ export default function PrivacyPolicy() {
                                     <p className="text-gray-700 leading-relaxed">
                                         Each business function requires some basic personal information to be completed.
                                         For the collection and use of additionally collected personal information, you
-                                        can give or withdraw your authorized consent to us. You can do this through the
-                                        settings function within the MPChat application. When you withdraw your consent,
-                                        we will no longer process the corresponding personal information. However, your
-                                        decision to withdraw consent will not affect the personal information processing
-                                        previously carried out based on your authorization.
+                                        can give or withdraw your authorized consent at any time. You can do this
+                                        through the settings function within the MPChat application. When you withdraw
+                                        your consent, we will no longer process the corresponding personal information.
+                                        However, your decision to withdraw consent will not affect the personal
+                                        information processing previously carried out based on your authorization.
                                     </p>
                                 </div>
 
@@ -634,12 +632,12 @@ export default function PrivacyPolicy() {
                                     </h3>
                                     <p className="text-gray-700 leading-relaxed">
                                         You can cancel your previously registered account at any time. You can do this
-                                        yourself through paths such as &quot;Settings&quot; - &quot;Account and
-                                        Security&quot; - &quot;Cancel Account&quot; within the MPChat application, or by
-                                        contacting us through the contact information provided in this Policy. After you
-                                        voluntarily cancel your account, we will stop providing you with products or
-                                        services and delete your personal information or anonymize it in accordance with
-                                        the requirements of applicable laws.
+                                        yourself through paths such as &quot;Settings&quot; -&gt; &quot;Account and
+                                        Security&quot; -&gt; &quot;Cancel Account&quot; within the MPChat application,
+                                        or by contacting us through the contact information provided in this Policy.
+                                        After you voluntarily cancel your account, we will stop providing you with
+                                        products or services and delete your personal information or anonymize it in
+                                        accordance with the requirements of applicable laws.
                                     </p>
                                 </div>
 
@@ -820,13 +818,15 @@ export default function PrivacyPolicy() {
                         <div className="mb-12">
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">9. How to Contact Us</h2>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                If you have any questions about this Policy, please contact us through the following
-                                methods: Email:{' '}
+                                If you have any questions about this Policy, please contact us at:
+                            </p>
+                            <p className="text-gray-700 leading-relaxed mb-4">
+                                Email:{' '}
                                 <a
-                                    href="mailto:support@mpchat.io"
+                                    href="mailto:support@mpchats.com"
                                     className="text-blue-600 hover:text-blue-800 underline"
                                 >
-                                    support@mpchat.io
+                                    support@mpchats.com
                                 </a>
                             </p>
                         </div>

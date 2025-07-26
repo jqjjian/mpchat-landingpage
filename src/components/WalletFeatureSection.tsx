@@ -7,7 +7,7 @@ const sections = [
     {
         title: 'Institutional-Grade Security',
         desc: 'MP Wallet employs advanced multi-signature technology and hardware security modules to protect your assets with institutional-grade security standards.',
-        bg: '/3.webp'
+        bg: '/03.webp'
     }
 ]
 
