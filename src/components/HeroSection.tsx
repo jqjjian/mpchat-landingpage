@@ -57,7 +57,7 @@ export default function HeroSection() {
                             transition={{ duration: 0.8, type: 'spring' }}
                             className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-[110px] font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 drop-shadow-lg leading-tight font-display text-white tracking-tight"
                         >
-                            LIVE WITH CRYPTO
+                            Your Life, Connected.
                         </motion.h1>
                     </Parallax>
                     <Parallax speed={isMobile ? 0 : -10}>

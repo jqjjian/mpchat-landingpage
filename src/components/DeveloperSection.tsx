@@ -25,9 +25,9 @@ export default function DeveloperSection() {
         },
         {
             icon: Shield,
-            title: 'Seamless Crypto Functionality',
-            description: 'Enterprise-grade security with digital asset management and encrypted communications',
-            highlights: ['End-to-End Encryption', 'Digital Assets', 'Secure Payments', 'Privacy Protection']
+            title: 'Seamless Multi-currency Functionality',
+            description: 'Enterprise-grade security with multi-currency asset management and encrypted communications',
+            highlights: ['End-to-End Encryption', 'Multi-currency Assets', 'Secure Payments', 'Privacy Protection']
         },
         {
             icon: Zap,
@@ -106,13 +106,6 @@ const message = await client.chat.sendMessage({
   to: 'user-id',
   content: 'Hello from MPChat!',
   encrypted: true
-})
-
-// Create crypto transaction
-const transaction = await client.crypto.transfer({
-  amount: 100,
-  currency: 'USDC',
-  recipient: 'wallet-address'
 })`
 
     return (
@@ -209,7 +202,8 @@ const transaction = await client.crypto.transfer({
                     className="text-lg text-blue-200 mb-12 text-center max-w-4xl leading-relaxed"
                 >
                     Leverage MPChat&apos;s powerful APIs and MiniApp framework to seamlessly integrate secure
-                    communications, digital asset management, and innovative social experiences into your applications
+                    communications, multi-currency asset management, and innovative social experiences into your
+                    applications
                 </motion.p>
 
                 {/* CTA Buttons */}
